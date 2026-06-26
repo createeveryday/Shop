@@ -1,0 +1,98 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_YAN9hp": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/NEWSLETTERBANNER.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "custom_liquid_7GJgVe": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: 0 auto;\n}\n</style>\n<video muted autoplay playsinline loop>\n    <source src=\"/media/cc0-videos/flower.mp4\"\n                  type=\"video/mp4\">\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/2dcdd251b9cc49da9ea5080d89ab9078.mp4\"\n                  type=\"video/mp4\">\n</video>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_iMF3zc": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_qBCUfg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_cLXLKG": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new art collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_H9NdGT": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qBCUfg",
+        "paragraph_cLXLKG",
+        "email_form_H9NdGT"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "image_banner_YAN9hp",
+    "custom_liquid_7GJgVe",
+    "main",
+    "form",
+    "newsletter_iMF3zc"
+  ]
+}

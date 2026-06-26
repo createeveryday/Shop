@@ -1,0 +1,152 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_67t4YD": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_dXEWk7": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_zyqhR8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_jpRGRb": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dXEWk7",
+        "text_zyqhR8",
+        "buttons_jpRGRb"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Contrived_BannerTop_955c00b0-4537-4446-97af-5e9460110c4e.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_NBFrtT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DbHpD6": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Con·trived</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_YiRCVR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Step into the world of limitless creativity,where art meets innovation! Each piece is a unique blend of algorithms and imagination, resulting in captivating visuals that are exclusive to your taste.</p>"
+          }
+        },
+        "button_kNVQFb": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DbHpD6",
+        "text_YiRCVR",
+        "button_kNVQFb"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_VxVJJX": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: 0 auto;\n}\n</style>\n<video muted autoplay playsinline loop>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/89b5c4697eb648d795ad8e7bda0102d3.mp4\"\n                  type=\"video/mp4\">\n    <source src=\"/media/cc0-videos/flower.mp4\"\n                  type=\"video/mp4\">\n</video>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_67t4YD",
+    "rich_text_NBFrtT",
+    "custom_liquid_VxVJJX",
+    "banner",
+    "product-grid"
+  ]
+}

@@ -1,0 +1,379 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_7GJgVe": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: 0 auto;\n}\n</style>\n<video muted autoplay playsinline loop>\n    <source src=\"/media/cc0-videos/flower.mp4\"\n                  type=\"video/mp4\">\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/2dcdd251b9cc49da9ea5080d89ab9078.mp4\"\n                  type=\"video/mp4\">\n</video>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_89r3gX": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/Download_Banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "multicolumn_4qFiDH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_hCCkiL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Freebie_Friday_1.jpg",
+            "title": "<a href=\"https://delivery.shopifyapps.com/-/3b6e459400fc440c/6ff5f14445a12f69\" target=\"_blank\" title=\"https://delivery.shopifyapps.com/-/3b6e459400fc440c/6ff5f14445a12f69\">Download</a>",
+            "text": "<p>D.R.A.K.E Playlist Cover</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UTLFcY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/IPHONE-WALLPAPER-SET-UPSMock-Up-1.png",
+            "title": "<a href=\"https://drive.google.com/file/d/1JDPt8V5HHnQRNhoxsZmAriRITxb8NnEy/view?usp=sharing\" target=\"_blank\" title=\"https://drive.google.com/file/d/1JDPt8V5HHnQRNhoxsZmAriRITxb8NnEy/view?usp=sharing\">Download</a>",
+            "text": "<p>Dead Pool iPhone Wallpaper</p>",
+            "link_label": "",
+            "link": "https://drive.google.com/file/d/1JDPt8V5HHnQRNhoxsZmAriRITxb8NnEy/view?usp=sharing"
+          }
+        },
+        "column_Unj9Yt": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/iphonewallmock_copy_8801b740-a64e-4101-8c6d-831718c8878a.jpg",
+            "title": "<a href=\"https://drive.google.com/file/d/187VWgAPYXXJ2Cgz1rj91OVuaXMFiEcSW/view?usp=drive_link\" target=\"_blank\" title=\"https://drive.google.com/file/d/187VWgAPYXXJ2Cgz1rj91OVuaXMFiEcSW/view?usp=drive_link\">Download</a>",
+            "text": "<p>D.R.A.K.E iPhone Wallpaper</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EaNBYG": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/IPHONE-WALLPAPER-_RumnittyMock-Up-1.png",
+            "title": "<a href=\"https://drive.google.com/file/d/1HZcdaZlazN8q45mqj4-F06LIlL-3-EHw/view?usp=drive_link\" target=\"_blank\" title=\"https://drive.google.com/file/d/1HZcdaZlazN8q45mqj4-F06LIlL-3-EHw/view?usp=drive_link\">Download</a>",
+            "text": "<p>Rum Nitty iPhone Wallpaper</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_t6J8Wt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/IPHONE-WALLPAPER-_SPIDER-CODMock-Up-2.png",
+            "title": "<a href=\"https://drive.google.com/file/d/1s9los8T7oztWetfljbalOTM4PHj55Ppm/view?usp=drive_link\" target=\"_blank\" title=\"https://drive.google.com/file/d/1s9los8T7oztWetfljbalOTM4PHj55Ppm/view?usp=drive_link\">Download</a>",
+            "text": "<p>SPIDER MAN COD iPHONE WALLPAPER</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yxYr7h": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/IPHONE-WALLPAPER-_DAYLYTMock-Up-1.png",
+            "title": "<a href=\"https://drive.google.com/file/d/10J3q5KS8--B9SJVgGDcCJHF2KQZ3zsph/view?usp=drive_link\" target=\"_blank\" title=\"https://drive.google.com/file/d/10J3q5KS8--B9SJVgGDcCJHF2KQZ3zsph/view?usp=drive_link\">Download</a>",
+            "text": "<p>DayLyt iPhone Wallpaper</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JWiMqB": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_h3Xdik": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_aKrprP": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4AFM4A": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_QTmkYJ": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FBAziW": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fWU9DX": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eyEtck": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FKeKTX": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_icdpVB": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_deDUK6": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qfTncb": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iGqdja": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UDJf4p": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pWPy94": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tKbnxg": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_hCCkiL",
+        "column_UTLFcY",
+        "column_Unj9Yt",
+        "column_EaNBYG",
+        "column_t6J8Wt",
+        "column_yxYr7h",
+        "column_JWiMqB",
+        "column_h3Xdik",
+        "column_aKrprP",
+        "column_4AFM4A",
+        "column_QTmkYJ",
+        "column_FBAziW",
+        "column_fWU9DX",
+        "column_eyEtck",
+        "column_FKeKTX",
+        "column_icdpVB",
+        "column_deDUK6",
+        "column_qfTncb",
+        "column_iGqdja",
+        "column_UDJf4p",
+        "column_pWPy94",
+        "column_tKbnxg"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "page_Y4wtee": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "page": "free-downloads",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 52
+      }
+    },
+    "newsletter_iMF3zc": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_qBCUfg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our Newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_cLXLKG": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new art collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_H9NdGT": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qBCUfg",
+        "paragraph_cLXLKG",
+        "email_form_H9NdGT"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_7GJgVe",
+    "image_banner_89r3gX",
+    "multicolumn_4qFiDH",
+    "main",
+    "form",
+    "page_Y4wtee",
+    "newsletter_iMF3zc"
+  ]
+}

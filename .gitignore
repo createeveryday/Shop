@@ -1,0 +1,11 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Shopify CLI / local theme tooling
+.shopify/
+node_modules/
+*.log

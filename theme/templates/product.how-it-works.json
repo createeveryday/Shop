@@ -1,0 +1,386 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_Fr3txa": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: 0 auto;\n}\n</style>\n<video muted autoplay playsinline loop>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/10900798c7314743b8c5ec1298d30d6e.mp4\"\n                  type=\"video/mp4\">\n    <source src=\"/media/cc0-videos/flower.mp4\"\n                  type=\"video/mp4\">\n</video>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_Nk3bNA": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_cx4WB4": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_8pfXag": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_HEUVx6": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cx4WB4",
+        "text_8pfXag",
+        "buttons_HEUVx6"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/TwizzyPrintz_Top_Banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_q9ygxH": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9gTYDA": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Con·trived</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_CQi8yL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Step into the world of limitless creativity,where art meets innovation!  Each piece is a unique blend of algorithms and imagination, resulting in captivating visuals that are exclusive to your taste.</p>"
+          }
+        },
+        "button_6XkcwD": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_9gTYDA",
+        "text_CQi8yL",
+        "button_6XkcwD"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_UBfykN": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PExfxi": {
+          "type": "column",
+          "settings": {
+            "title": "Step 1 :",
+            "text": "<p>Provide your contact information and Choose one of our <a href=\"/collections/themes\" target=\"_blank\" title=\"Themes\">Themes</a> or message us your own theme idea. <em><strong>we will work with you to bring your vision to life!</strong></em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3VmRFF": {
+          "type": "column",
+          "settings": {
+            "title": "Step 2 :",
+            "text": "<p>Upload A High resolution photo that isn't blurry.<br/>you’ll receive a message back shortly after.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JtAyMn": {
+          "type": "column",
+          "settings": {
+            "title": "Step 3 :",
+            "text": "<p>once payment is complete You will receive a Email with your Custom art for approval before we send out print sizes</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_PExfxi",
+        "column_3VmRFF",
+        "column_JtAyMn"
+      ],
+      "settings": {
+        "title": "HOW IT WORKS",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_cUHqXy": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "img:hover {opacity: 0.3;}",
+        ".middle:hover {opacity: 1;}",
+        "@media only screen and (max-width: 1287px) {.tab img {width: 93%; height: 0%; align-content: center; object-fit: scale-down; } img:hover {opacity: 0.3; } .middle:hover {opacity: 1; }}"
+      ],
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html>\n<head>\n\t<meta charset=\"utf-8\"/>\n\t\n\t<title>Photo Gallery</title>\n</head>\n<body>\n\n\t<table align=\"center\">\n\t\t<tr class=\"tab\" >\n\t\t\t<td>\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/thisistwizz_An_intense_riveting_Wide_Shot_of_a_group_of_Black_f_97466d9f-741d-4cad-802a-9358ab594c78.png?v=1708986910\" height=\"350\" width=\"400\"/>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/thisistwizz_Spider_man_drawn_with_white_ink_on_black_paper_7cc3e886-0fde-4aab-a099-ab5c333cb90b.png?v=1708987004\" height=\"350\" width=\"400\"/>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/thisistwizz_Logo_Kaws_art_slyle_Super_Mario_as_a_Photographer_1e7ad1b4-a80b-4778-848c-p.png?v=1708986899\" height=\"350\" width=\"400\"/>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr class=\"tab\">\n\t\t\t<td>\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/oppp.jpg?v=1708998871\" height=\"350\" width=\"400\"/>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/Mario64_2_copy.jpg?v=1708998871\" height=\"350\" width=\"400\"/>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/snowspider_copy.jpg?v=1708998871\" height=\"350\" width=\"400\"/>\n\t\t\t</td>\n\t\t</tr>\n\t\t<tr class=\"tab\">\n\t\t\t<td>\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/thisistwizz_an_oil_on_canvas_Steph_Curry_inside_it_in_the_style_93fe641d-a850-40ed-813d-2b105ca051ca.png?v=1708998872\" height=\"350\" width=\"400\"/>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/thisistwizz_image_courtesy_of_a_black_model_na_in_the_style_of__50eabc33-1a8a-4ea8-bffa-73bc0f0ec8a9.png?v=1708998872\" height=\"350\" width=\"400\"/>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t\t<img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/thisistwizz_cyberpunk_nanotech_gasmask_sith_polished_sleek_blac_991deae9-7759-4685-9b82-af1ca675bf14.png?v=1708998872\" height=\"350\" width=\"400\"/>\n\t\t\t</td>\n\t\t</tr>\n\t\t\n\t</table>\n\t<style>\n\t\timg {object-fit: cover;\n\t\tpadding-left: 5%;\ntransition: .5s ease;\n      backface-visibility: hidden;}\n@media only screen and (max-width: 1287px){\nimg {\n    width: 93%;\n    height: 0%;\n    align-content: center;\n    object-fit: scale-down;\n  }\n\t\t\n\n\t\t@media only screen and (max-width: 769px){\n\t\t\ttr {display: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tmargin: 0px;\n\twidth: 100%;}}\n\t\t\t\n\n\t\t \n\t</style>\n\t\t\n\t\n</body>\n</html>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_hxj7dm": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"margin:0 auto;\" class=\"pxFormGenerator\" id=\"wboeAPZO0ES-0MaYOlpYow\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_9ChQR8": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<center><h1>LAST STEP</h1>\n<img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/12-59-10-594_512.gif?v=1708926436\"style=\"width:50px;height:50px;\"",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "color_scheme": "background-1",
+        "media_size": "large",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_nJPgDW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_94DmYq": {
+          "type": "heading",
+          "settings": {
+            "heading": "LETS CREATE!!!",
+            "heading_size": "h1"
+          }
+        },
+        "text_ycVbB6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You will receive a Email with your Custom art<br/>for approval before we send out print sizes</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_94DmYq",
+        "text_ycVbB6"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_8TYxpp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_JGkbbc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/DownloadCover.png",
+            "title": "Download File",
+            "text": "<p>After your order is completed and you have approved your custom art we will email you a link to download your Digital File.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4xtxPA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/printcover.png",
+            "title": "Print",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_g73GBa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/framecover.png",
+            "title": "Frame",
+            "text": "<p>Fits easy to find / affordable frames found at popular places like amazon, target,bed bath & beyond, michael's, walmart, etc.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_JGkbbc",
+        "column_4xtxPA",
+        "column_g73GBa"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "Related products",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 8,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_Fr3txa",
+    "image_banner_Nk3bNA",
+    "rich_text_q9ygxH",
+    "multicolumn_UBfykN",
+    "custom_liquid_cUHqXy",
+    "custom_liquid_hxj7dm",
+    "custom_liquid_9ChQR8",
+    "main",
+    "rich_text_nJPgDW",
+    "multicolumn_8TYxpp",
+    "related-products"
+  ]
+}

@@ -1,0 +1,316 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_Fr3txa": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: 0 auto;\n}\n</style>\n<video muted autoplay playsinline loop>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/10900798c7314743b8c5ec1298d30d6e.mp4\"\n                  type=\"video/mp4\">\n    <source src=\"/media/cc0-videos/flower.mp4\"\n                  type=\"video/mp4\">\n</video>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_Nk3bNA": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_cx4WB4": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_8pfXag": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_HEUVx6": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cx4WB4",
+        "text_8pfXag",
+        "buttons_HEUVx6"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/TwizzyPrintz_Top_Banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "multicolumn_UBfykN": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PExfxi": {
+          "type": "column",
+          "settings": {
+            "title": "Step 1 :",
+            "text": "<p>Provide your contact information and Choose one of our Themes. You can als message us your own theme idea. <em><strong>we will work with you to bring your vision to life!</strong></em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3VmRFF": {
+          "type": "column",
+          "settings": {
+            "title": "Step 2 :",
+            "text": "<p>Upload A High resolution photo that isn't blurry.<br/>you’ll receive a message back shortly after.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JtAyMn": {
+          "type": "column",
+          "settings": {
+            "title": "Step 3 :",
+            "text": "<p>once payment is complete You will receive a Email with your Custom art for approval before we send out print sizes</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_PExfxi",
+        "column_3VmRFF",
+        "column_JtAyMn"
+      ],
+      "settings": {
+        "title": "HOW IT WORKS",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_hxj7dm": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"margin:0 auto;\" class=\"pxFormGenerator\" id=\"wboeAPZO0ES-0MaYOlpYow\"></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "color_scheme": "background-1",
+        "media_size": "large",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_nJPgDW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_94DmYq": {
+          "type": "heading",
+          "settings": {
+            "heading": "LETS CREATE!!!",
+            "heading_size": "h1"
+          }
+        },
+        "text_ycVbB6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You will receive a Email with your Custom art<br/>for approval before we send out print sizes</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_94DmYq",
+        "text_ycVbB6"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_8TYxpp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_JGkbbc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/DownloadCover.png",
+            "title": "Download File",
+            "text": "<p>After your order is completed and you have approved your custom art we will email you a link to download your Digital File.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4xtxPA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/printcover.png",
+            "title": "Print",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_g73GBa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/framecover.png",
+            "title": "Frame",
+            "text": "<p>Fits easy to find / affordable frames found at popular places like amazon, target,bed bath & beyond, michael's, walmart, etc.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_JGkbbc",
+        "column_4xtxPA",
+        "column_g73GBa"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "Related products",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 8,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_Fr3txa",
+    "image_banner_Nk3bNA",
+    "multicolumn_UBfykN",
+    "custom_liquid_hxj7dm",
+    "main",
+    "rich_text_nJPgDW",
+    "multicolumn_8TYxpp",
+    "related-products"
+  ]
+}

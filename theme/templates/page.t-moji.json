@@ -1,0 +1,576 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_btRke3": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: auto;\n}\n</style>\n<video muted autoplay playsinline loop>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/047cd755d9b941e381eedf1a25b2d3ae.mp4\"\n                  type=\"video/mp4\">\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/047cd755d9b941e381eedf1a25b2d3ae.mp4\"\n                  type=\"video/mp4\">\n</video>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_R4PQ6B": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/t_moji.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "video_XdVngM": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_4hYJzK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CpQtmJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "T-MOJI CUSTOM ART",
+            "heading_size": "hxl"
+          }
+        },
+        "text_rrcrXU": {
+          "type": "text",
+          "settings": {
+            "text": "<h1></h1><h3>What you receive with purchase:</h3><p>-Social media size 1080x1350<br/></p><p>-Profile icon Picture size<br/></p><p>-Phone wallpaper size <br/></p><p>-18x24 Poster size</p><p></p>"
+          }
+        },
+        "button_h7HNF7": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "https://cash.me/$thisistwizz",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CpQtmJ",
+        "text_rrcrXU",
+        "button_h7HNF7"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_M9YFpm": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/T-MOJI_BANNER_SETUP_copy.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_h7WDwz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3DcDYa": {
+          "type": "heading",
+          "settings": {
+            "heading": "HOW IT WORKS",
+            "heading_size": "h1"
+          }
+        },
+        "text_XHticw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Once you purchase a T-MOJI you will receive your files via a <strong>Google Drive</strong> link to the email you provide. All files are in png format (perfect for posting and printing). You will receive your order in 72 hours due to high demand.</p><h1><strong>WHAT YOU NEED TO GET STARTED</strong></h1><ul><li>Upload a Clear face photo  and any logos you want added</li><li>Your Name and/or location if you want that displayed </li><li>Leave a message of any specific  details you may want </li></ul><p></p>"
+          }
+        },
+        "button_TyiWBn": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_3DcDYa",
+        "text_XHticw",
+        "button_TyiWBn"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_eDPmGi": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: auto;\n}\n</style>\n<video muted autoplay playsinline loop>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/3933fc78b68f4ad2a9867d569936a87e.mp4\"\n                  type=\"video/mp4\">\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/3933fc78b68f4ad2a9867d569936a87e.mp4\"\n                  type=\"video/mp4\">\n</video>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "slideshow_gaEM6r": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_pfFKez": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/TMOJI_SLIDE_1.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_wP46pB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/TMOJI_SLIDE_12.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_KtL97B": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/TMOJI_SLIDE_3.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_Hf9Ykj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/TMOJI_SLIDE_6.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_cqTyeV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/TMOJI_SLIDE_11.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "https://www.instagram.com/thisistwizz/",
+            "button_style_secondary": true,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_pfFKez",
+        "slide_wP46pB",
+        "slide_KtL97B",
+        "slide_Hf9Ykj",
+        "slide_cqTyeV"
+      ],
+      "settings": {
+        "layout": "grid",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "T-MOJI SLIDESHOW"
+      }
+    },
+    "image_banner_3Pp6nV": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/TMOJI_BANNER_2_fe49f136-71a5-4315-ad4d-3504bbcde561.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_UU3jh4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bgTeMk": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "LAST STEP!",
+            "heading_size": "h1"
+          }
+        },
+        "text_N3JgRT": {
+          "type": "text",
+          "settings": {
+            "text": "<h1><strong>$75</strong></h1>"
+          }
+        },
+        "button_MCmDbn": {
+          "type": "button",
+          "settings": {
+            "button_label": "$CashApp",
+            "button_link": "https://cash.me/$thisistwizz",
+            "button_style_secondary": true,
+            "button_label_2": "SQUARE",
+            "button_link_2": "https://square.link/u/Tieknyld?src=sheet",
+            "button_style_secondary_2": true
+          }
+        },
+        "button_zzpCPf": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "SQUARE PAY",
+            "button_link": "https://square.link/u/tFkJBte0",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "text_kAjB4V": {
+          "type": "text",
+          "settings": {
+            "text": "<h1></h1><p>via <strong>CASHAPP OR SQUARE </strong>when you’re ready </p><p><strong> </strong>Email <strong>ThisisTwiZz@gmail.com </strong>For other Payment Options </p><h2><strong>-or-</strong></h2><p>DM <a href=\"https://www.instagram.com/\" target=\"_blank\" title=\"https://www.instagram.com/\">@THISISTWIZZ</a> via INSTAGRAM or X </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bgTeMk",
+        "text_N3JgRT",
+        "button_MCmDbn",
+        "button_zzpCPf",
+        "text_kAjB4V"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "ss_gallery_1_eNpMCz": {
+      "type": "ss-gallery-1",
+      "blocks": {
+        "image_thJh6R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TMOJI_SLIDE_12.png",
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_cXmfm4": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_CimRpY": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_edpJQ6": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_QJei38": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_GHFXBK": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_fUHcgR": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_DBDpMY": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_HDXyQG": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_NpBhE6": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_VkyFVf": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_4ETTiV": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        },
+        "image_GDrWkH": {
+          "type": "image",
+          "settings": {
+            "url": "",
+            "hide_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "image_thJh6R",
+        "image_cXmfm4",
+        "image_CimRpY",
+        "image_edpJQ6",
+        "image_QJei38",
+        "image_GHFXBK",
+        "image_fUHcgR",
+        "image_DBDpMY",
+        "image_HDXyQG",
+        "image_NpBhE6",
+        "image_VkyFVf",
+        "image_4ETTiV",
+        "image_GDrWkH"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "<h2>Gallery #1</h2>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 32,
+        "heading_size_mobile": 28,
+        "heading_height": 130,
+        "heading_align": "center",
+        "heading_align_mobile": "center",
+        "sub_heading": "<p>Subheading</p>",
+        "sub_heading_custom": false,
+        "sub_heading_font": "josefin_sans_n4",
+        "sub_heading_size": 16,
+        "sub_heading_size_mobile": 16,
+        "sub_heading_height": 130,
+        "sub_heading_mt": 16,
+        "sub_heading_mt_mobile": 16,
+        "sub_heading_align": "center",
+        "sub_heading_align_mobile": "center",
+        "images_gap": 8,
+        "images_gap_mobile": 10,
+        "images_radius": 4,
+        "images_position": "row",
+        "images_position_mobile": "column",
+        "images_mt": 32,
+        "images_mt_mobile": 24,
+        "main_image": "shopify://shop_images/Stickers_3cc44f89-42f1-4bfa-ae9e-61baee41abe1.gif",
+        "main_image_url": "",
+        "main_image_width": 30,
+        "small_images_row": 3,
+        "small_images_row_mobile": 2,
+        "heading_color": "#000000",
+        "sub_heading_color": "#000000",
+        "image_overlay": "#000000",
+        "background_color": "#000000",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "multicolumn_AXdgrA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Vi6jnE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/T_Circle2Logo-copy.gif",
+            "title": "<a href=\"https://thisistwizz.com/\" title=\"https://thisistwizz.com/\">www.ThisisTwiZz.com</a>",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Vi6jnE"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_btRke3",
+    "image_banner_R4PQ6B",
+    "video_XdVngM",
+    "rich_text_4hYJzK",
+    "image_banner_M9YFpm",
+    "rich_text_h7WDwz",
+    "custom_liquid_eDPmGi",
+    "slideshow_gaEM6r",
+    "image_banner_3Pp6nV",
+    "main",
+    "rich_text_UU3jh4",
+    "ss_gallery_1_eNpMCz",
+    "multicolumn_AXdgrA"
+  ]
+}
