@@ -1,0 +1,61 @@
+{% comment %}
+  Create+Everyday — Agentura hero
+  Full-bleed grayscale portrait, centered wordmark, four mono corner
+  labels, and a faint geometric motif. Editor-configurable; styles in
+  assets/ce-agentura.css.
+{% endcomment %}
+{%- liquid
+  assign s = section.settings
+-%}
+<section
+  class="ce-hero-ag ce-hero-ag--{{ s.height }}"
+  style="--ce-overlay: {{ s.overlay_opacity | divided_by: 100.0 }};"
+  {{ section.shopify_attributes }}
+>
+  <div class="ce-hero-ag__media" aria-hidden="true">
+    {%- if s.image != blank -%}
+      {{ s.image | image_url: width: 2400 | image_tag:
+        loading: 'eager', fetchpriority: 'high', sizes: '100vw',
+        widths: '800, 1200, 1600, 2000, 2400',
+        alt: s.image.alt | default: s.wordmark | escape }}
+    {%- else -%}
+      <div class="ce-ph" style="position:absolute;inset:0;background:#1c1c1c;"></div>
+    {%- endif -%}
+  </div>
+  <div class="ce-hero-ag__scrim" aria-hidden="true"></div>
+  {%- if s.show_motif -%}<div class="ce-motif" aria-hidden="true"></div>{%- endif -%}
+
+  {%- if s.label_tl != blank -%}<div class="ce-hero-ag__corner ce-hero-ag__corner--tl"><p class="ce-label ce-reveal">{{ s.label_tl | escape | newline_to_br }}</p></div>{%- endif -%}
+  {%- if s.label_tr != blank -%}<div class="ce-hero-ag__corner ce-hero-ag__corner--tr"><p class="ce-label ce-reveal">{{ s.label_tr | escape | newline_to_br }}</p></div>{%- endif -%}
+  {%- if s.label_bl != blank -%}<div class="ce-hero-ag__corner ce-hero-ag__corner--bl"><p class="ce-label ce-reveal">{{ s.label_bl | escape | newline_to_br }}</p></div>{%- endif -%}
+  {%- if s.label_br != blank -%}<div class="ce-hero-ag__corner ce-hero-ag__corner--br"><p class="ce-label ce-reveal">{{ s.label_br | escape | newline_to_br }}</p></div>{%- endif -%}
+
+  <div class="ce-hero-ag__inner">
+    {%- if s.wordmark != blank -%}
+      <h1 class="ce-hero-ag__wordmark ce-wordmark ce-reveal">{{ s.wordmark | escape }}</h1>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Agentura hero",
+  "tag": "section",
+  "class": "ce-section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Background image", "info": "High-contrast portrait works best; shown in grayscale." },
+    { "type": "text", "id": "wordmark", "label": "Wordmark", "default": "Create+Everyday" },
+    { "type": "header", "content": "Corner labels (use line breaks for stacked lines)" },
+    { "type": "textarea", "id": "label_tl", "label": "Top-left", "default": "Every brief is\na blank canvas." },
+    { "type": "textarea", "id": "label_tr", "label": "Top-right", "default": "We fill it\nwith something\nworth keeping." },
+    { "type": "textarea", "id": "label_bl", "label": "Bottom-left", "default": "We don't make ads.\nWe make culture." },
+    { "type": "textarea", "id": "label_br", "label": "Bottom-right" },
+    { "type": "header", "content": "Layout" },
+    { "type": "select", "id": "height", "label": "Height", "options": [ { "value": "medium", "label": "Tall (80vh)" }, { "value": "full", "label": "Full screen" } ], "default": "full" },
+    { "type": "range", "id": "overlay_opacity", "min": 0, "max": 90, "step": 5, "unit": "%", "label": "Overlay strength", "default": 45 },
+    { "type": "checkbox", "id": "show_motif", "label": "Show geometric motif", "default": true },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" }
+  ],
+  "presets": [{ "name": "Agentura hero" }]
+}
+{% endschema %}

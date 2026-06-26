@@ -1,0 +1,70 @@
+{% comment %}
+  Create+Everyday — Big CTA / wordmark (Agentura)
+  Oversized statement headline with mono corner labels, optional
+  grayscale background image, CTA buttons, and an optional giant
+  wordmark line. Styles in assets/ce-agentura.css.
+{% endcomment %}
+{%- liquid
+  assign s = section.settings
+-%}
+<section class="ce-cta" style="--ce-overlay: {{ s.overlay_opacity | divided_by: 100.0 }};" {{ section.shopify_attributes }}>
+  {%- if s.image != blank -%}
+    <div class="ce-cta__media" aria-hidden="true">
+      {{ s.image | image_url: width: 2400 | image_tag:
+        loading: 'lazy', sizes: '100vw', widths: '800, 1200, 1600, 2000, 2400',
+        alt: s.image.alt | default: s.heading | escape }}
+    </div>
+    <div class="ce-cta__scrim" aria-hidden="true"></div>
+  {%- endif -%}
+
+  <div class="ce-cta__inner">
+    {%- if s.label_left != blank or s.label_right != blank -%}
+      <div class="ce-cta__labels">
+        <p class="ce-label ce-reveal">{{ s.label_left | escape | newline_to_br }}</p>
+        <p class="ce-label ce-reveal" data-delay="1" style="text-align:right;">{{ s.label_right | escape | newline_to_br }}</p>
+      </div>
+    {%- endif -%}
+
+    {%- if s.heading != blank -%}
+      <h2 class="ce-cta__heading ce-reveal" data-delay="1">{{ s.heading | escape }}</h2>
+    {%- endif -%}
+
+    {%- if s.button_label_1 != blank or s.button_label_2 != blank -%}
+      <div class="ce-cta__actions ce-reveal" data-delay="2">
+        {%- if s.button_label_1 != blank -%}
+          <a class="ce-btn ce-reveal" {% if s.button_link_1 != blank %}href="{{ s.button_link_1 }}"{% else %}role="link" aria-disabled="true"{% endif %}>{{ s.button_label_1 | escape }}</a>
+        {%- endif -%}
+        {%- if s.button_label_2 != blank -%}
+          <a class="ce-btn ce-btn--ghost" {% if s.button_link_2 != blank %}href="{{ s.button_link_2 }}"{% else %}role="link" aria-disabled="true"{% endif %}>{{ s.button_label_2 | escape }}</a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if s.wordmark != blank -%}
+      <p class="ce-cta__wordmark ce-wordmark ce-reveal" data-delay="3">{{ s.wordmark | escape }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Big CTA / wordmark",
+  "tag": "section",
+  "class": "ce-section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Background image (optional)", "info": "Shown in grayscale behind the text." },
+    { "type": "range", "id": "overlay_opacity", "min": 0, "max": 90, "step": 5, "unit": "%", "label": "Overlay strength", "default": 55 },
+    { "type": "header", "content": "Corner labels" },
+    { "type": "textarea", "id": "label_left", "label": "Top-left label", "default": "Every project\nstarts here." },
+    { "type": "textarea", "id": "label_right", "label": "Top-right label", "default": "Built on craft.\nDriven by obsession." },
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "heading", "label": "Headline", "default": "Ready to make something worth keeping?" },
+    { "type": "text", "id": "button_label_1", "label": "Primary button label", "default": "Shop the collection" },
+    { "type": "url", "id": "button_link_1", "label": "Primary button link" },
+    { "type": "text", "id": "button_label_2", "label": "Secondary button label", "default": "Get in touch" },
+    { "type": "url", "id": "button_link_2", "label": "Secondary button link" },
+    { "type": "text", "id": "wordmark", "label": "Giant wordmark (optional)", "default": "Create+Everyday" }
+  ],
+  "presets": [{ "name": "Big CTA / wordmark" }]
+}
+{% endschema %}

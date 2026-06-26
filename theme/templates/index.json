@@ -31,7 +31,8 @@
         "color_scheme": "background-1",
         "show_scroll_cue": true,
         "scroll_cue_text": "Scroll"
-      }
+      },
+      "disabled": true
     },
     "custom_liquid_QHhqLA": {
       "type": "custom-liquid",
@@ -790,9 +791,38 @@
         "button_label": "Explore the work",
         "button_link": "/collections/all"
       }
+    },
+    "ce_hero_agentura_1": {
+      "type": "ce-hero-agentura",
+      "settings": {
+        "wordmark": "Create+Everyday",
+        "label_tl": "Every brief is\na blank canvas.",
+        "label_tr": "We fill it\nwith something\nworth keeping.",
+        "label_bl": "We don't make ads.\nWe make culture.",
+        "label_br": "",
+        "height": "full",
+        "overlay_opacity": 45,
+        "show_motif": true,
+        "color_scheme": "background-1"
+      }
+    },
+    "ce_cta_1": {
+      "type": "ce-cta-wordmark",
+      "settings": {
+        "overlay_opacity": 55,
+        "label_left": "Every project\nstarts here.",
+        "label_right": "Built on craft.\nDriven by obsession.",
+        "heading": "Ready to make something worth keeping?",
+        "button_label_1": "Shop the collection",
+        "button_link_1": "/collections/all",
+        "button_label_2": "Get in touch",
+        "button_link_2": "/pages/contact",
+        "wordmark": "Create+Everyday"
+      }
     }
   },
   "order": [
+    "ce_hero_agentura_1",
     "ce_hero_cinematic_placeholder",
     "ce_marquee_1",
     "ce_statement_1",
@@ -813,6 +843,7 @@
     "featured_product_JmwBmV",
     "newsletter_QW7Gjh",
     "collection_list_i7nzzE",
-    "multicolumn_cgaWnd"
+    "multicolumn_cgaWnd",
+    "ce_cta_1"
   ]
 }
