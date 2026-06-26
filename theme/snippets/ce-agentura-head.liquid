@@ -1,0 +1,14 @@
+{% comment %}
+  Create+Everyday — "Agentura" redesign: global head includes.
+  Rendered once from layout/theme.liquid. Loads the editorial fonts
+  (Archivo display + Space Mono labels) and the scoped design-system
+  CSS/JS. Self-contained; safe to remove to fully revert the redesign.
+{% endcomment %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+>
+{{ 'ce-agentura.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'ce-agentura.js' | asset_url }}" defer="defer"></script>

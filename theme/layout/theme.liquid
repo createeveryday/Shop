@@ -281,9 +281,10 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  {% include 'yoycol-script' %}</head>
+  {% include 'yoycol-script' %}
+  {% render 'ce-agentura-head' %}</head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="gradient ce-agentura{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>

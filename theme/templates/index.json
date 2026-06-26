@@ -771,10 +771,31 @@
         "padding_top": 8,
         "padding_bottom": 0
       }
+    },
+    "ce_marquee_1": {
+      "type": "ce-marquee",
+      "settings": {
+        "items": "Built for the drive, High-end automotive art, Cinematic by design, Create + Everyday",
+        "separator": "✦",
+        "speed": 36
+      }
+    },
+    "ce_statement_1": {
+      "type": "ce-statement",
+      "settings": {
+        "index": "02",
+        "caption": "We don't react to trends. We decide what's next.",
+        "label": "Vision",
+        "heading": "Creative Direction",
+        "button_label": "Explore the work",
+        "button_link": "/collections/all"
+      }
     }
   },
   "order": [
     "ce_hero_cinematic_placeholder",
+    "ce_marquee_1",
+    "ce_statement_1",
     "custom_liquid_QHhqLA",
     "slideshow_wkehGc",
     "raw_ELphcG",

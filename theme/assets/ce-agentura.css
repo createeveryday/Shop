@@ -1,0 +1,233 @@
+/* =====================================================================
+   Create+Everyday — "Agentura" editorial redesign layer
+   Scoped under <body class="ce-agentura">. Additive: does not rewrite
+   Spotlight core. Provides design tokens, editorial typography, and
+   component classes used by ce-* sections.
+   ===================================================================== */
+
+.ce-agentura {
+  --ce-bg: #101010;
+  --ce-bg-soft: #181818;
+  --ce-paper: #eceae5;
+  --ce-ink: #0e0e0e;
+  --ce-fg: #ededea;
+  --ce-fg-dim: rgba(237, 237, 234, 0.58);
+  --ce-line: rgba(237, 237, 234, 0.14);
+  --ce-line-ink: rgba(14, 14, 14, 0.16);
+  --ce-accent: #ff5f00;
+  --ce-accent-deep: #b90000;
+
+  --ce-display: "Archivo", "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --ce-mono: "Space Mono", "SFMono-Regular", ui-monospace, "JetBrains Mono", monospace;
+
+  --ce-gutter: clamp(1.6rem, 4vw, 5rem);
+  --ce-maxw: 150rem;
+}
+
+/* ---- Global base reskin (dark editorial canvas) ---------------------- */
+.ce-agentura {
+  background-color: var(--ce-bg);
+  color: var(--ce-fg);
+}
+
+/* Display headings across the store take on the heavy uppercase look */
+.ce-agentura h1,
+.ce-agentura h2,
+.ce-agentura .h0,
+.ce-agentura .h1,
+.ce-agentura .ce-display {
+  font-family: var(--ce-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+/* ---- Editorial primitives ------------------------------------------- */
+.ce-label {
+  font-family: var(--ce-mono);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 0.9vw, 1.25rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+.ce-label--dim { color: var(--ce-fg-dim); }
+.ce-label--accent { color: var(--ce-accent); }
+
+.ce-index {
+  font-family: var(--ce-mono);
+  font-size: clamp(1.05rem, 0.9vw, 1.25rem);
+  letter-spacing: 0.18em;
+  color: var(--ce-fg-dim);
+}
+
+.ce-display {
+  margin: 0;
+  font-size: clamp(3.4rem, 7vw, 9rem);
+}
+.ce-display--xl { font-size: clamp(5rem, 13vw, 17rem); }
+
+.ce-wordmark {
+  font-family: var(--ce-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.82;
+  margin: 0;
+  font-size: clamp(5.5rem, 19vw, 24rem);
+  word-break: break-word;
+}
+
+/* ---- Buttons (sharp, solid, mono) ----------------------------------- */
+.ce-agentura .ce-btn,
+.ce-agentura .button.ce-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.5rem 2.4rem;
+  border-radius: 0;
+  border: 1px solid transparent;
+  background: var(--ce-fg);
+  color: var(--ce-ink);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
+}
+.ce-agentura .ce-btn:hover { background: var(--ce-accent); color: #fff; }
+.ce-agentura .ce-btn--ghost {
+  background: transparent;
+  color: var(--ce-fg);
+  border-color: var(--ce-line);
+}
+.ce-agentura .ce-btn--ghost:hover { border-color: var(--ce-accent); color: var(--ce-accent); background: transparent; }
+.ce-agentura .ce-btn--ink { background: var(--ce-ink); color: var(--ce-fg); }
+.ce-agentura .ce-btn--ink:hover { background: var(--ce-accent); color: #fff; }
+
+/* ---- Animated link underline (line-fill) ---------------------------- */
+.ce-underline {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.ce-underline::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -0.3rem;
+  width: 100%; height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ce-underline:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* ---- Statement panel (the hallmark) --------------------------------- */
+.ce-statement { position: relative; background: var(--ce-bg); overflow: hidden; }
+.ce-statement__media { position: relative; width: 100%; aspect-ratio: 16 / 7; min-height: 42rem; }
+.ce-statement__media img,
+.ce-statement__media .ce-ph {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.6s ease, transform 1.2s ease;
+}
+.ce-statement:hover .ce-statement__media img { filter: grayscale(0.55) contrast(1.05); }
+.ce-statement__panel {
+  position: relative;
+  margin: -12rem auto 0;
+  max-width: var(--ce-maxw);
+  width: calc(100% - var(--ce-gutter) * 2);
+  background: var(--ce-paper);
+  color: var(--ce-ink);
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  padding: clamp(2.4rem, 4vw, 5rem);
+  align-items: end;
+}
+.ce-statement__left { display: flex; flex-direction: column; gap: 1.4rem; }
+.ce-statement__left .ce-index,
+.ce-statement__left .ce-label { color: rgba(14,14,14,0.55); }
+.ce-statement__caption {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(1.2rem, 1.1vw, 1.5rem);
+  line-height: 1.6;
+  color: var(--ce-ink);
+  max-width: 34rem;
+}
+.ce-statement__right { text-align: right; }
+.ce-statement__right .ce-label { color: rgba(14,14,14,0.5); display: block; margin-bottom: 1.6rem; }
+.ce-statement__heading {
+  font-family: var(--ce-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  margin: 0;
+  color: var(--ce-ink);
+  font-size: clamp(3.4rem, 6.5vw, 8.5rem);
+}
+
+/* ---- Marquee --------------------------------------------------------- */
+.ce-marquee { background: var(--ce-bg); padding: clamp(2rem,3vw,3.5rem) 0; border-block: 1px solid var(--ce-line); overflow: hidden; }
+.ce-marquee__track { display: flex; width: max-content; gap: 0; animation: ce-marquee var(--ce-marquee-dur, 36s) linear infinite; }
+.ce-marquee:hover .ce-marquee__track { animation-play-state: paused; }
+.ce-marquee__item {
+  font-family: var(--ce-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-size: clamp(2.4rem, 4vw, 5rem);
+  color: var(--ce-fg);
+  padding: 0 3rem;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.ce-marquee__item span { color: var(--ce-accent); margin-left: 3rem; font-size: 0.6em; }
+@keyframes ce-marquee { to { transform: translateX(-50%); } }
+
+/* ---- Line motif (faint geometric background) ------------------------ */
+.ce-motif { position: absolute; inset: 0; pointer-events: none; opacity: 0.5; }
+.ce-motif::before, .ce-motif::after {
+  content: ""; position: absolute; border: 1px solid var(--ce-line);
+}
+.ce-motif::before { width: 40rem; height: 40rem; transform: rotate(45deg); left: 50%; top: 50%; translate: -50% -50%; }
+.ce-motif::after { width: 30rem; height: 30rem; border-radius: 50%; left: 50%; top: 50%; translate: -50% -50%; }
+
+/* ---- Scroll reveal --------------------------------------------------- */
+.ce-reveal { opacity: 0; transform: translateY(2.4rem); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+.ce-reveal.is-in { opacity: 1; transform: none; }
+.ce-reveal[data-delay="1"] { transition-delay: 0.08s; }
+.ce-reveal[data-delay="2"] { transition-delay: 0.16s; }
+.ce-reveal[data-delay="3"] { transition-delay: 0.24s; }
+
+/* ---- Cursor follower ------------------------------------------------- */
+.ce-cursor {
+  position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none;
+  width: 2.4rem; height: 2.4rem; border: 1px solid var(--ce-accent); border-radius: 50%;
+  transform: translate(-50%, -50%); transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  mix-blend-mode: difference; will-change: transform;
+}
+.ce-cursor.is-hover { width: 4.2rem; height: 4.2rem; background: rgba(255,95,0,0.15); }
+
+/* ---- Responsive ------------------------------------------------------ */
+@media screen and (max-width: 749px) {
+  .ce-statement__panel { grid-template-columns: 1fr; gap: 2rem; margin-top: -8rem; }
+  .ce-statement__right { text-align: left; }
+  .ce-statement__media { min-height: 34rem; aspect-ratio: 4 / 5; }
+  .ce-cursor { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ce-marquee__track { animation: none; }
+  .ce-reveal { opacity: 1; transform: none; transition: none; }
+  .ce-statement__media img { transition: none; }
+}

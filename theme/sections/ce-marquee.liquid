@@ -1,0 +1,33 @@
+{% comment %}
+  Create+Everyday — Editorial marquee (Agentura)
+  A seamless horizontal scrolling band of big uppercase phrases with
+  accent separators. JS (ce-agentura.js) clones the track for a
+  gapless loop and pauses on hover / reduced-motion.
+{% endcomment %}
+{%- liquid
+  assign s = section.settings
+  assign items = s.items | split: ','
+-%}
+<div class="ce-marquee" style="--ce-marquee-dur: {{ s.speed | default: 36 }}s;" {{ section.shopify_attributes }}>
+  <div class="ce-marquee__track">
+    {%- for item in items -%}
+      <div class="ce-marquee__item">
+        {{ item | strip | escape }}<span>{{ s.separator | default: '✦' }}</span>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Editorial marquee",
+  "tag": "section",
+  "class": "ce-section",
+  "settings": [
+    { "type": "textarea", "id": "items", "label": "Phrases (comma-separated)", "default": "Built for the drive, High-end automotive art, Cinematic by design, Create + Everyday" },
+    { "type": "text", "id": "separator", "label": "Separator glyph", "default": "✦" },
+    { "type": "range", "id": "speed", "min": 12, "max": 80, "step": 2, "unit": "s", "label": "Loop duration", "default": 36 }
+  ],
+  "presets": [{ "name": "Editorial marquee" }]
+}
+{% endschema %}
