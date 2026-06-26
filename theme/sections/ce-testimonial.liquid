@@ -1,0 +1,56 @@
+{% comment %}
+  Create+Everyday — Testimonial (Agentura)
+  Paper-background block: oversized display quote, mono supporting line,
+  portrait, attribution, and a dark CTA button. Styles in
+  assets/ce-agentura.css.
+{% endcomment %}
+{%- liquid
+  assign s = section.settings
+-%}
+<section class="ce-testimonial" {{ section.shopify_attributes }}>
+  <div class="ce-testimonial__inner">
+    <div class="ce-testimonial__main">
+      {%- if s.quote != blank -%}
+        <blockquote class="ce-testimonial__quote ce-reveal">{{ s.quote | escape }}</blockquote>
+      {%- endif -%}
+      {%- if s.support != blank -%}
+        <p class="ce-testimonial__support ce-reveal" data-delay="1">{{ s.support | escape }}</p>
+      {%- endif -%}
+      <div class="ce-testimonial__attr ce-reveal" data-delay="2">
+        {%- if s.name != blank -%}<span class="ce-testimonial__name ce-label">{{ s.name | escape }}</span>{%- endif -%}
+        {%- if s.role != blank -%}<span class="ce-testimonial__role ce-label ce-label--dim">{{ s.role | escape }}</span>{%- endif -%}
+      </div>
+      {%- if s.button_label != blank -%}
+        <a class="ce-btn ce-btn--ink ce-reveal" data-delay="3" style="margin-top:2.4rem;"
+          {% if s.button_link != blank %}href="{{ s.button_link }}"{% else %}role="link" aria-disabled="true"{% endif %}>
+          {{ s.button_label | escape }}
+        </a>
+      {%- endif -%}
+    </div>
+    {%- if s.image != blank -%}
+      <div class="ce-testimonial__media ce-reveal" data-delay="1">
+        {{ s.image | image_url: width: 900 | image_tag:
+          loading: 'lazy', sizes: '(min-width:990px) 30vw, 60vw',
+          widths: '300, 500, 700, 900', alt: s.name | escape }}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonial",
+  "tag": "section",
+  "class": "ce-section",
+  "settings": [
+    { "type": "textarea", "id": "quote", "label": "Quote", "default": "They didn't present options. They presented a direction — and it was the right one." },
+    { "type": "textarea", "id": "support", "label": "Supporting line", "default": "We take on a limited number of projects each year. If you know, you know." },
+    { "type": "image_picker", "id": "image", "label": "Portrait" },
+    { "type": "text", "id": "name", "label": "Name", "default": "Agatha Richards" },
+    { "type": "text", "id": "role", "label": "Role", "default": "Create+Everyday — Creative Lead" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Book a free consult" },
+    { "type": "url", "id": "button_link", "label": "Button link" }
+  ],
+  "presets": [{ "name": "Testimonial" }]
+}
+{% endschema %}

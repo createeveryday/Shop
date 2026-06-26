@@ -819,6 +819,56 @@
         "button_link_2": "/pages/contact",
         "wordmark": "Create+Everyday"
       }
+    },
+    "ce_editorial_cards_1": {
+      "type": "ce-editorial-cards",
+      "settings": {
+        "label": "Selected work",
+        "heading": "A collection of obsessions",
+        "note": "We don't wait for the right brief.\nWe write it."
+      },
+      "blocks": {
+        "c1": {
+          "type": "card",
+          "settings": {
+            "index": "001",
+            "title": "The mark that stays",
+            "caption": "Identity, distilled."
+          }
+        },
+        "c2": {
+          "type": "card",
+          "settings": {
+            "index": "002",
+            "title": "Built for the drive",
+            "caption": "Automotive art, reframed."
+          }
+        },
+        "c3": {
+          "type": "card",
+          "settings": {
+            "index": "003",
+            "title": "Why visual silence wins",
+            "caption": "Restraint as authority."
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ]
+    },
+    "ce_testimonial_1": {
+      "type": "ce-testimonial",
+      "settings": {
+        "quote": "They didn't present options. They presented a direction — and it was the right one.",
+        "support": "We take on a limited number of projects each year. If you know, you know.",
+        "name": "Agatha Richards",
+        "role": "Create+Everyday — Creative Lead",
+        "button_label": "Book a free consult",
+        "button_link": "/pages/contact"
+      }
     }
   },
   "order": [
@@ -826,6 +876,7 @@
     "ce_hero_cinematic_placeholder",
     "ce_marquee_1",
     "ce_statement_1",
+    "ce_editorial_cards_1",
     "custom_liquid_QHhqLA",
     "slideshow_wkehGc",
     "raw_ELphcG",
@@ -839,6 +890,7 @@
     "featured_collection_69RHzA",
     "featured_collection_JGTtpi",
     "image_with_text_9bYE9E",
+    "ce_testimonial_1",
     "collage_cDxUGE",
     "featured_product_JmwBmV",
     "newsletter_QW7Gjh",

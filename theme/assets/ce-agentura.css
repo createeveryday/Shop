@@ -272,3 +272,76 @@
   .ce-cta__labels { flex-direction: column; gap: 1rem; }
   .ce-cta__labels p:last-child { text-align: left !important; }
 }
+
+/* ---- Editorial cards ------------------------------------------------- */
+.ce-edcards { background: var(--ce-bg); padding: clamp(4rem, 8vh, 9rem) var(--ce-gutter); }
+.ce-edcards__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; margin-bottom: clamp(2.4rem, 4vw, 4.5rem); }
+.ce-edcards__head h2 { color: var(--ce-fg); }
+.ce-edcards__note { max-width: 26rem; text-align: right; }
+.ce-edcards__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.6rem, 2vw, 3rem); }
+.ce-edcard__link { display: block; text-decoration: none; color: inherit; }
+.ce-edcard__media { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #1c1c1c; }
+.ce-edcard__media img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); transition: filter 0.5s ease, transform 0.9s cubic-bezier(0.22,1,0.36,1); }
+.ce-edcard:hover .ce-edcard__media img { filter: grayscale(0); transform: scale(1.05); }
+.ce-edcard__row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: 1.6rem; }
+.ce-edcard__title { font-family: var(--ce-display); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1.05; margin: 0; color: var(--ce-fg); font-size: clamp(1.7rem, 1.6vw, 2.3rem); }
+.ce-edcard__caption { margin: 0.8rem 0 0; }
+@media screen and (max-width: 989px) { .ce-edcards__grid { grid-template-columns: 1fr 1fr; } }
+@media screen and (max-width: 749px) {
+  .ce-edcards__grid { grid-template-columns: 1fr; }
+  .ce-edcards__head { flex-direction: column; align-items: flex-start; }
+  .ce-edcards__note { text-align: left; }
+}
+
+/* ---- Testimonial ----------------------------------------------------- */
+.ce-testimonial { background: var(--ce-paper); color: var(--ce-ink); padding: clamp(5rem, 10vh, 12rem) var(--ce-gutter); }
+.ce-testimonial__inner { max-width: var(--ce-maxw); margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(3rem, 5vw, 7rem); align-items: center; }
+.ce-testimonial__quote { font-family: var(--ce-display); font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.98; margin: 0; color: var(--ce-ink); font-size: clamp(2.6rem, 4.6vw, 6rem); }
+.ce-testimonial__support { font-family: var(--ce-mono); text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.6; margin: 2.4rem 0 0; max-width: 42rem; font-size: clamp(1.2rem, 1.1vw, 1.5rem); }
+.ce-testimonial__attr { margin-top: 2.8rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.ce-testimonial__attr .ce-label { color: rgba(14,14,14,0.7); }
+.ce-testimonial__attr .ce-label--dim { color: rgba(14,14,14,0.45); }
+.ce-testimonial__media { aspect-ratio: 4 / 5; overflow: hidden; }
+.ce-testimonial__media img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+@media screen and (max-width: 749px) {
+  .ce-testimonial__inner { grid-template-columns: 1fr; }
+  .ce-testimonial__media { order: -1; max-width: 28rem; }
+}
+
+/* ---- Product-card restyle (editorial; CSS-only over Spotlight cards) -- */
+.ce-agentura .card,
+.ce-agentura .card__inner,
+.ce-agentura .card__media,
+.ce-agentura .card .media { border-radius: 0 !important; }
+.ce-agentura .card__media .media img,
+.ce-agentura .card .media img {
+  filter: grayscale(1) contrast(1.04);
+  transition: filter 0.5s ease, transform 0.9s cubic-bezier(0.22,1,0.36,1);
+}
+.ce-agentura .card-wrapper:hover .card__media .media img,
+.ce-agentura .card-wrapper:hover .card .media img { filter: grayscale(0); transform: scale(1.04); }
+.ce-agentura .card__heading,
+.ce-agentura .card__heading a {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+.ce-agentura .card-information .price,
+.ce-agentura .card-information .price__regular .price-item,
+.ce-agentura .card-information .price-item {
+  font-family: var(--ce-mono);
+  letter-spacing: 0.06em;
+}
+.ce-agentura .card__badge .badge {
+  border-radius: 0;
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--ce-accent);
+  color: #fff;
+  border: 0;
+}
+/* Featured-collection "view all" + slider headings inherit the editorial look already via h2 rules */
