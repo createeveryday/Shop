@@ -462,3 +462,50 @@
 }
 /* Cart thumbnails keep color for product recognition */
 .ce-agentura .cart-item__image { filter: none; }
+
+/* ---- Header / nav ---------------------------------------------------- */
+.ce-agentura .header { border-bottom: 1px solid var(--ce-line); }
+.ce-agentura .header__menu-item,
+.ce-agentura .header__menu-item.list-menu__item {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.ce-agentura .header__heading-link {
+  font-family: var(--ce-display);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-weight: 800;
+}
+.ce-agentura .header__active-menu-item { text-underline-offset: 0.6rem; }
+.ce-agentura .menu-drawer__menu-item {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* ---- Footer ---------------------------------------------------------- */
+.ce-agentura .footer { border-top: 1px solid var(--ce-line); }
+.ce-agentura .footer-block__heading {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 1.3rem;
+}
+.ce-agentura .footer-block__details-content .list-menu__item--link,
+.ce-agentura .footer .list-menu__item--link {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.2rem;
+}
+.ce-agentura .footer__copyright,
+.ce-agentura .copyright__content {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
