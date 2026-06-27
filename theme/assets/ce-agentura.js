@@ -51,12 +51,33 @@
     });
   }
 
-  function init() { initReveals(); initMarquees(); initCursor(); }
+  /* 4) Hero background video — autoplay, pause off-screen, honor reduce - */
+  function initHeroVideo() {
+    document.querySelectorAll('.ce-hero-ag__video').forEach(function (v) {
+      if (reduce) {
+        try { v.removeAttribute('autoplay'); v.pause(); } catch (e) {}
+        return;
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              var p = v.play();
+              if (p && p.catch) p.catch(function () {});
+            } else { v.pause(); }
+          });
+        }, { threshold: 0.1 });
+        io.observe(v);
+      }
+    });
+  }
+
+  function init() { initReveals(); initMarquees(); initCursor(); initHeroVideo(); }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else { init(); }
 
   /* Re-run reveals/marquees when sections are added in the theme editor */
-  document.addEventListener('shopify:section:load', function () { initReveals(); initMarquees(); });
+  document.addEventListener('shopify:section:load', function () { initReveals(); initMarquees(); initHeroVideo(); });
 })();

@@ -240,7 +240,8 @@
 }
 .ce-hero-ag--medium { min-height: 80vh; }
 .ce-hero-ag__media { position: absolute; inset: 0; }
-.ce-hero-ag__media img { width: 100%; height: 100%; object-fit: cover; }
+.ce-hero-ag__media img,
+.ce-hero-ag__media video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .ce-hero-ag__scrim { position: absolute; inset: 0; background: rgba(16, 16, 16, var(--ce-overlay, 0.45)); }
 .ce-hero-ag__inner { position: relative; z-index: 2; width: 100%; text-align: center; padding: 0 var(--ce-gutter); }
 .ce-hero-ag__wordmark { color: var(--ce-fg); text-shadow: 0 2px 40px rgba(0,0,0,0.4); }

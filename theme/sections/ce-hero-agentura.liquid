@@ -12,8 +12,26 @@
   style="--ce-overlay: {{ s.overlay_opacity | divided_by: 100.0 }};"
   {{ section.shopify_attributes }}
 >
+  {%- liquid
+    assign poster = s.image
+    if poster == blank and s.video != blank
+      assign poster = s.video.preview_image
+    endif
+  -%}
   <div class="ce-hero-ag__media" aria-hidden="true">
-    {%- if s.image != blank -%}
+    {%- if s.video != blank -%}
+      <video class="ce-hero-ag__video" autoplay muted loop playsinline preload="metadata"
+        {% if poster != blank %}poster="{{ poster | image_url: width: 1600 }}"{% endif %}>
+        {%- for source in s.video.sources -%}
+          <source src="{{ source.url }}" type="{{ source.mime_type }}">
+        {%- endfor -%}
+      </video>
+    {%- elsif s.video_url_mp4 != blank -%}
+      <video class="ce-hero-ag__video" autoplay muted loop playsinline preload="metadata"
+        {% if poster != blank %}poster="{{ poster | image_url: width: 1600 }}"{% endif %}>
+        <source src="{{ s.video_url_mp4 }}" type="video/mp4">
+      </video>
+    {%- elsif s.image != blank -%}
       {{ s.image | image_url: width: 2400 | image_tag:
         loading: 'eager', fetchpriority: 'high', sizes: '100vw',
         widths: '800, 1200, 1600, 2000, 2400',
@@ -43,7 +61,10 @@
   "tag": "section",
   "class": "ce-section",
   "settings": [
-    { "type": "image_picker", "id": "image", "label": "Background image", "info": "High-contrast portrait works best; shown in grayscale." },
+    { "type": "header", "content": "Background media" },
+    { "type": "video", "id": "video", "label": "Background video", "info": "Autoplays muted and looped. Falls back to the image below as a poster." },
+    { "type": "text", "id": "video_url_mp4", "label": "Or direct MP4 URL", "info": "A direct .mp4 link (e.g. a Shopify CDN video URL). Used only if no Shopify video is set." },
+    { "type": "image_picker", "id": "image", "label": "Background image / poster", "info": "Shown when no video is set, and as the video's poster while it loads." },
     { "type": "text", "id": "wordmark", "label": "Wordmark", "default": "Create+Everyday" },
     { "type": "header", "content": "Corner labels (use line breaks for stacked lines)" },
     { "type": "textarea", "id": "label_tl", "label": "Top-left", "default": "Every brief is\na blank canvas." },
