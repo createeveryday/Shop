@@ -1,0 +1,291 @@
+{% comment %}
+  Create+Everyday — Visual gallery (coverflow carousel)
+  Centered enlarged slide with peeking neighbours, category filter chips,
+  prev/next arrows, swipe/drag, and inline video playback. Rendered in the
+  editorial theme. Self-contained styles + script below.
+{% endcomment %}
+{%- liquid
+  assign s = section.settings
+-%}
+<section class="ce-gallery" data-ce-gallery {{ section.shopify_attributes }}>
+  <div class="ce-gallery__head">
+    {%- if s.label != blank -%}<span class="ce-label ce-label--accent ce-reveal">{{ s.label | escape }}</span>{%- endif -%}
+    {%- if s.heading != blank -%}<h2 class="ce-gallery__heading ce-display ce-reveal" data-delay="1">{{ s.heading | escape }}</h2>{%- endif -%}
+    {%- if s.subheading != blank -%}<p class="ce-gallery__sub ce-reveal" data-delay="2">{{ s.subheading | escape }}</p>{%- endif -%}
+  </div>
+
+  {%- if s.show_filters and section.blocks.size > 0 -%}
+    {%- assign seen = '' -%}
+    <div class="ce-gallery__chips ce-reveal">
+      <button class="ce-chip is-active" type="button" data-filter="*">{{ s.all_label | default: 'All' }}</button>
+      {%- for block in section.blocks -%}
+        {%- assign c = block.settings.category | strip -%}
+        {%- if c != blank -%}
+          {%- assign ch = c | handleize -%}
+          {%- assign key = '|' | append: ch | append: '|' -%}
+          {%- unless seen contains key -%}
+            {%- assign seen = seen | append: key -%}
+            <button class="ce-chip" type="button" data-filter="{{ ch }}">{{ c | escape }}</button>
+          {%- endunless -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if s.more_label != blank -%}
+        <a class="ce-btn ce-gallery__more" {% if s.more_link != blank %}href="{{ s.more_link }}"{% else %}role="link" aria-disabled="true"{% endif %}>
+          {{ s.more_label | escape }}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2"/></svg>
+        </a>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <div class="ce-gallery__viewport" data-viewport>
+    <div class="ce-gallery__track" data-track>
+      {%- for block in section.blocks -%}
+        {%- assign b = block.settings -%}
+        {%- assign has_video = false -%}
+        {%- if b.video != blank or b.external_video != blank -%}{%- assign has_video = true -%}{%- endif -%}
+        <article class="ce-gallery__slide" data-cat="{{ b.category | handleize }}" {{ block.shopify_attributes }}>
+          <div class="ce-gallery__card">
+            <div class="ce-gallery__media">
+              {%- if b.image != blank -%}
+                {{ b.image | image_url: width: 1400 | image_tag:
+                  loading: 'lazy', sizes: '(min-width:750px) 42rem, 80vw',
+                  widths: '400, 700, 1000, 1400', alt: b.title | default: b.category | escape }}
+              {%- else -%}
+                <div class="ce-gallery__ph"></div>
+              {%- endif -%}
+            </div>
+
+            {%- if has_video -%}
+              <button class="ce-gallery__play" type="button" aria-label="Play video">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <div class="ce-gallery__player" data-player hidden>
+                <video class="ce-gallery__video" controls playsinline preload="none"
+                  {% if b.image != blank %}poster="{{ b.image | image_url: width: 1000 }}"{% endif %}>
+                  {%- if b.video != blank -%}
+                    {%- for src in b.video.sources -%}<source src="{{ src.url }}" type="{{ src.mime_type }}">{%- endfor -%}
+                  {%- elsif b.external_video != blank -%}
+                    <source src="{{ b.external_video }}" type="video/mp4">
+                  {%- endif -%}
+                </video>
+              </div>
+            {%- endif -%}
+
+            {%- if b.title != blank or b.category != blank -%}
+              <div class="ce-gallery__cap">
+                {%- if b.category != blank -%}<span class="ce-label">{{ b.category | escape }}</span>{%- endif -%}
+                {%- if b.title != blank -%}<p class="ce-gallery__title">{{ b.title | escape }}</p>{%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <div class="ce-gallery__nav">
+    <button class="ce-gallery__arrow" type="button" data-prev aria-label="Previous">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12H5m0 0 6-6m-6 6 6 6" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="ce-gallery__arrow" type="button" data-next aria-label="Next">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+  </div>
+</section>
+
+{% stylesheet %}
+.ce-gallery { background: var(--ce-bg, #101010); color: var(--ce-fg, #ededea); padding: clamp(4rem, 8vh, 9rem) 0; overflow: hidden; }
+.ce-gallery__head { text-align: center; max-width: 70rem; margin: 0 auto clamp(2.2rem, 4vw, 3.4rem); padding: 0 var(--ce-gutter, 2rem); }
+.ce-gallery__head .ce-label { display: block; margin-bottom: 1.2rem; }
+.ce-gallery__heading { margin: 0; font-size: clamp(3rem, 5vw, 6rem); }
+.ce-gallery__sub { margin: 1.6rem 0 0; color: var(--ce-fg-dim, rgba(237,237,234,.58)); font-size: clamp(1.5rem, 1.4vw, 1.8rem); line-height: 1.6; }
+
+.ce-gallery__chips { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem; padding: 0 var(--ce-gutter, 2rem); margin-bottom: clamp(2.4rem, 4vw, 4rem); }
+.ce-chip { font-family: var(--ce-mono, monospace); text-transform: uppercase; letter-spacing: 0.12em; font-size: 1.15rem; font-weight: 700; padding: 1.1rem 1.8rem; border: 1px solid var(--ce-line, rgba(237,237,234,.14)); background: transparent; color: var(--ce-fg, #ededea); cursor: pointer; transition: color .25s, border-color .25s, background .25s; }
+.ce-chip:hover { border-color: var(--ce-accent, #ff5f00); color: var(--ce-accent, #ff5f00); }
+.ce-chip.is-active { background: var(--ce-fg, #ededea); color: var(--ce-ink, #0e0e0e); border-color: var(--ce-fg, #ededea); }
+.ce-gallery__more { margin-left: 0.6rem; }
+
+.ce-gallery__viewport { width: 100%; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; cursor: grab; }
+.ce-gallery__viewport::-webkit-scrollbar { display: none; }
+.ce-gallery__viewport.is-dragging { cursor: grabbing; scroll-snap-type: none; }
+.ce-gallery__track { display: flex; gap: clamp(1.2rem, 2vw, 2.4rem); width: max-content; padding: 2rem max(var(--ce-gutter, 2rem), calc(50vw - 21rem)); }
+.ce-gallery__slide { scroll-snap-align: center; flex: 0 0 auto; width: min(80vw, 42rem); }
+.ce-gallery__slide[hidden] { display: none; }
+.ce-gallery__card { position: relative; aspect-ratio: 4 / 5; overflow: hidden; transform: scale(.85); opacity: .5; transition: transform .55s cubic-bezier(.22,1,.36,1), opacity .55s; box-shadow: 0 3rem 6rem rgba(0,0,0,.5); }
+.ce-gallery__slide.is-center .ce-gallery__card { transform: scale(1); opacity: 1; }
+.ce-gallery__media, .ce-gallery__media img, .ce-gallery__ph, .ce-gallery__player, .ce-gallery__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ce-gallery__ph { background: linear-gradient(135deg, #232323, #141414); }
+.ce-gallery__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.8rem 2rem; background: linear-gradient(transparent, rgba(0,0,0,.72)); z-index: 2; }
+.ce-gallery__cap .ce-label { color: #fff; opacity: .85; }
+.ce-gallery__title { font-family: var(--ce-display, sans-serif); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; color: #fff; margin: .4rem 0 0; font-size: clamp(1.7rem, 1.8vw, 2.2rem); line-height: 1.04; }
+.ce-gallery__play { position: absolute; inset: 0; margin: auto; width: 6.4rem; height: 6.4rem; display: grid; place-items: center; border-radius: 50%; background: rgba(0,0,0,.42); border: 1px solid rgba(255,255,255,.65); color: #fff; cursor: pointer; z-index: 3; transition: background .25s, transform .25s; }
+.ce-gallery__play:hover { background: var(--ce-accent, #ff5f00); transform: scale(1.06); border-color: transparent; }
+.ce-gallery__player { z-index: 4; background: #000; }
+.ce-gallery__nav { display: flex; justify-content: center; gap: 1.4rem; margin-top: clamp(2.2rem, 4vw, 3.4rem); }
+.ce-gallery__arrow { width: 5.2rem; height: 5.2rem; border-radius: 50%; border: 1px solid var(--ce-line, rgba(237,237,234,.18)); background: transparent; color: var(--ce-fg, #ededea); cursor: pointer; display: grid; place-items: center; transition: color .25s, border-color .25s; }
+.ce-gallery__arrow:hover { border-color: var(--ce-accent, #ff5f00); color: var(--ce-accent, #ff5f00); }
+@media screen and (max-width: 749px) {
+  .ce-gallery__slide { width: 78vw; }
+  .ce-gallery__track { padding-left: 11vw; padding-right: 11vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ce-gallery__viewport { scroll-behavior: auto; }
+  .ce-gallery__card { transition: none; }
+}
+{% endstylesheet %}
+
+{% javascript %}
+(function () {
+  function initGallery(root) {
+    if (root.dataset.galleryReady) return;
+    root.dataset.galleryReady = '1';
+    var vp = root.querySelector('[data-viewport]');
+    var track = root.querySelector('[data-track]');
+    if (!vp || !track) return;
+    var slides = Array.prototype.slice.call(track.querySelectorAll('.ce-gallery__slide'));
+    var raf = null;
+
+    function visible() { return slides.filter(function (s) { return !s.hidden; }); }
+
+    function update() {
+      raf = null;
+      var vpRect = vp.getBoundingClientRect();
+      var center = vpRect.left + vpRect.width / 2;
+      var best = null, bestDist = Infinity;
+      visible().forEach(function (s) {
+        var r = s.getBoundingClientRect();
+        var d = Math.abs((r.left + r.width / 2) - center);
+        if (d < bestDist) { bestDist = d; best = s; }
+      });
+      slides.forEach(function (s) { s.classList.toggle('is-center', s === best); });
+    }
+    function onScroll() { if (!raf) raf = requestAnimationFrame(update); }
+    vp.addEventListener('scroll', onScroll, { passive: true });
+
+    function scrollToSlide(s, smooth) {
+      if (!s) return;
+      var vpRect = vp.getBoundingClientRect();
+      var r = s.getBoundingClientRect();
+      var delta = (r.left + r.width / 2) - (vpRect.left + vpRect.width / 2);
+      vp.scrollTo({ left: vp.scrollLeft + delta, behavior: smooth === false ? 'auto' : 'smooth' });
+    }
+
+    function step(dir) {
+      var vis = visible();
+      var current = vis.indexOf(track.querySelector('.ce-gallery__slide.is-center'));
+      if (current < 0) current = 0;
+      var next = Math.min(Math.max(current + dir, 0), vis.length - 1);
+      scrollToSlide(vis[next]);
+    }
+    var prev = root.querySelector('[data-prev]');
+    var next = root.querySelector('[data-next]');
+    if (prev) prev.addEventListener('click', function () { step(-1); });
+    if (next) next.addEventListener('click', function () { step(1); });
+
+    /* Category filter chips */
+    root.querySelectorAll('.ce-chip').forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        root.querySelectorAll('.ce-chip').forEach(function (c) { c.classList.remove('is-active'); });
+        chip.classList.add('is-active');
+        var f = chip.getAttribute('data-filter');
+        slides.forEach(function (s) {
+          s.hidden = !(f === '*' || s.getAttribute('data-cat') === f);
+        });
+        var vis = visible();
+        if (vis.length) scrollToSlide(vis[0], false);
+        update();
+      });
+    });
+
+    /* Inline video playback */
+    root.querySelectorAll('.ce-gallery__play').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var card = btn.closest('.ce-gallery__card');
+        var player = card.querySelector('[data-player]');
+        var video = card.querySelector('.ce-gallery__video');
+        if (player) player.hidden = false;
+        btn.style.display = 'none';
+        if (video) { var p = video.play(); if (p && p.catch) p.catch(function () {}); }
+      });
+    });
+
+    /* Pointer drag to scroll */
+    var down = false, startX = 0, startScroll = 0, moved = false;
+    vp.addEventListener('pointerdown', function (e) {
+      down = true; moved = false; startX = e.clientX; startScroll = vp.scrollLeft; vp.classList.add('is-dragging');
+    });
+    vp.addEventListener('pointermove', function (e) {
+      if (!down) return;
+      var dx = e.clientX - startX;
+      if (Math.abs(dx) > 4) moved = true;
+      vp.scrollLeft = startScroll - dx;
+    });
+    function endDrag() {
+      if (!down) return;
+      down = false; vp.classList.remove('is-dragging');
+      var c = track.querySelector('.ce-gallery__slide.is-center');
+      if (c) scrollToSlide(c);
+    }
+    vp.addEventListener('pointerup', endDrag);
+    vp.addEventListener('pointerleave', endDrag);
+    vp.addEventListener('click', function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+    /* Center the middle slide on load */
+    var vis = visible();
+    if (vis.length) scrollToSlide(vis[Math.floor(vis.length / 2)], false);
+    requestAnimationFrame(update);
+    window.addEventListener('resize', update);
+  }
+
+  function initAll() { document.querySelectorAll('[data-ce-gallery]').forEach(initGallery); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initAll);
+  else initAll();
+  document.addEventListener('shopify:section:load', initAll);
+})();
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Visual gallery",
+  "tag": "section",
+  "class": "ce-section",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Eyebrow label", "default": "Gallery" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "My Visual Diary" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "See the world through my lens: adventures in photos and videos." },
+    { "type": "header", "content": "Filters" },
+    { "type": "checkbox", "id": "show_filters", "label": "Show category chips", "default": true },
+    { "type": "text", "id": "all_label", "label": "\"All\" chip label", "default": "All" },
+    { "type": "text", "id": "more_label", "label": "Extra button label", "default": "View More" },
+    { "type": "url", "id": "more_link", "label": "Extra button link" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Gallery item",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image (or video poster)" },
+        { "type": "text", "id": "category", "label": "Category (chip)", "default": "Italy" },
+        { "type": "text", "id": "title", "label": "Caption" },
+        { "type": "video", "id": "video", "label": "Video (Shopify-hosted)" },
+        { "type": "text", "id": "external_video", "label": "Or direct MP4 URL" }
+      ]
+    }
+  ],
+  "max_blocks": 24,
+  "presets": [
+    {
+      "name": "Visual gallery",
+      "blocks": [
+        { "type": "item", "settings": { "category": "Italy", "title": "Lago di Braies" } },
+        { "type": "item", "settings": { "category": "Dubai", "title": "Above the clouds" } },
+        { "type": "item", "settings": { "category": "London", "title": "On the lens" } },
+        { "type": "item", "settings": { "category": "Berlin", "title": "Alpine mirror" } },
+        { "type": "item", "settings": { "category": "Rome", "title": "Cliffside" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

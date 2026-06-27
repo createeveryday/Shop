@@ -869,6 +869,86 @@
         "button_label": "Book a free consult",
         "button_link": "/pages/contact"
       }
+    },
+    "ce_gallery_1": {
+      "type": "ce-gallery",
+      "settings": {
+        "label": "Gallery",
+        "heading": "My Visual Diary",
+        "subheading": "See the world through my lens: adventures in photos and videos.",
+        "show_filters": true,
+        "all_label": "All",
+        "more_label": "View More",
+        "more_link": ""
+      },
+      "blocks": {
+        "g1": {
+          "type": "item",
+          "settings": {
+            "category": "Italy",
+            "title": "Lago di Braies"
+          }
+        },
+        "g2": {
+          "type": "item",
+          "settings": {
+            "category": "Dubai",
+            "title": "Above the clouds"
+          }
+        },
+        "g3": {
+          "type": "item",
+          "settings": {
+            "category": "London",
+            "title": "On the lens"
+          }
+        },
+        "g4": {
+          "type": "item",
+          "settings": {
+            "category": "Berlin",
+            "title": "Alpine mirror"
+          }
+        },
+        "g5": {
+          "type": "item",
+          "settings": {
+            "category": "Rome",
+            "title": "Cliffside"
+          }
+        },
+        "g6": {
+          "type": "item",
+          "settings": {
+            "category": "Lisbon",
+            "title": "Old town light"
+          }
+        },
+        "g7": {
+          "type": "item",
+          "settings": {
+            "category": "India",
+            "title": "Backwaters"
+          }
+        },
+        "g8": {
+          "type": "item",
+          "settings": {
+            "category": "Japan",
+            "title": "Neon nights"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6",
+        "g7",
+        "g8"
+      ]
     }
   },
   "order": [
@@ -896,6 +976,7 @@
     "newsletter_QW7Gjh",
     "collection_list_i7nzzE",
     "multicolumn_cgaWnd",
+    "ce_gallery_1",
     "ce_cta_1"
   ]
 }
