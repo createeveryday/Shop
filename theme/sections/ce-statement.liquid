@@ -14,8 +14,20 @@
       <div class="ce-statement__carousel" data-st-carousel data-autoplay="{{ s.autoplay_speed }}">
         <div class="ce-statement__track" data-st-track>
           {%- for block in section.blocks -%}
-            {%- assign focal = block.settings.focal | default: 'center' -%}
-            {%- assign fstyle = 'object-position: ' | append: focal -%}
+            {%- liquid
+              assign focal = block.settings.focal | default: 'center'
+              if focal == 'manual'
+                assign pos = block.settings.focal_x | append: '% ' | append: block.settings.focal_y | append: '%'
+              else
+                assign pos = focal
+              endif
+              assign zoom = block.settings.zoom | default: 100
+              assign fstyle = 'object-position:' | append: pos
+              if zoom > 100
+                assign scale = zoom | divided_by: 100.0
+                assign fstyle = fstyle | append: ';transform:scale(' | append: scale | append: ');transform-origin:' | append: pos
+              endif
+            -%}
             <div class="ce-statement__slide" data-st-slide {{ block.shopify_attributes }}>
               {%- if block.settings.image != blank -%}
                 {{ block.settings.image | image_url: width: 1600 | image_tag:
@@ -117,7 +129,7 @@
         { "type": "image_picker", "id": "image", "label": "Image" },
         {
           "type": "select", "id": "focal", "label": "Framing (focal point)", "default": "center",
-          "info": "Which part of the photo stays in frame when cropped.",
+          "info": "Which part of the photo stays in frame when cropped. Choose Manual to use the sliders below.",
           "options": [
             { "value": "center", "label": "Center" },
             { "value": "top", "label": "Top" },
@@ -127,9 +139,13 @@
             { "value": "top left", "label": "Top-left" },
             { "value": "top right", "label": "Top-right" },
             { "value": "bottom left", "label": "Bottom-left" },
-            { "value": "bottom right", "label": "Bottom-right" }
+            { "value": "bottom right", "label": "Bottom-right" },
+            { "value": "manual", "label": "Manual (use sliders)" }
           ]
-        }
+        },
+        { "type": "range", "id": "focal_x", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Manual: horizontal", "default": 50, "info": "Used when Framing = Manual. 0 = left, 100 = right." },
+        { "type": "range", "id": "focal_y", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Manual: vertical", "default": 50, "info": "0 = top, 100 = bottom." },
+        { "type": "range", "id": "zoom", "min": 100, "max": 200, "step": 5, "unit": "%", "label": "Zoom", "default": 100, "info": "Zooms toward the focal point." }
       ]
     }
   ],
