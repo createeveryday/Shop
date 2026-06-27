@@ -133,10 +133,9 @@
 .ce-statement__media img,
 .ce-statement__media .ce-ph {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
-  filter: grayscale(1) contrast(1.05);
-  transition: filter 0.6s ease, transform 1.2s ease;
+  transition: transform 1.2s ease;
 }
-.ce-statement:hover .ce-statement__media img { filter: grayscale(0.55) contrast(1.05); }
+.ce-statement:hover .ce-statement__media img { transform: scale(1.03); }
 .ce-statement__panel {
   position: relative;
   margin: -12rem auto 0;
@@ -241,7 +240,7 @@
 }
 .ce-hero-ag--medium { min-height: 80vh; }
 .ce-hero-ag__media { position: absolute; inset: 0; }
-.ce-hero-ag__media img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.06); }
+.ce-hero-ag__media img { width: 100%; height: 100%; object-fit: cover; }
 .ce-hero-ag__scrim { position: absolute; inset: 0; background: rgba(16, 16, 16, var(--ce-overlay, 0.45)); }
 .ce-hero-ag__inner { position: relative; z-index: 2; width: 100%; text-align: center; padding: 0 var(--ce-gutter); }
 .ce-hero-ag__wordmark { color: var(--ce-fg); text-shadow: 0 2px 40px rgba(0,0,0,0.4); }
@@ -260,7 +259,7 @@
 /* ---- Big CTA / wordmark ---------------------------------------------- */
 .ce-cta { position: relative; overflow: hidden; background: var(--ce-bg); padding: clamp(6rem, 12vh, 14rem) var(--ce-gutter); }
 .ce-cta__media { position: absolute; inset: 0; }
-.ce-cta__media img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+.ce-cta__media img { width: 100%; height: 100%; object-fit: cover; }
 .ce-cta__scrim { position: absolute; inset: 0; background: rgba(16, 16, 16, var(--ce-overlay, 0.55)); }
 .ce-cta__inner { position: relative; z-index: 2; max-width: var(--ce-maxw); margin: 0 auto; }
 .ce-cta__labels { display: flex; justify-content: space-between; gap: 2rem; margin-bottom: clamp(3rem, 6vw, 7rem); }
@@ -281,8 +280,8 @@
 .ce-edcards__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.6rem, 2vw, 3rem); }
 .ce-edcard__link { display: block; text-decoration: none; color: inherit; }
 .ce-edcard__media { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #1c1c1c; }
-.ce-edcard__media img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); transition: filter 0.5s ease, transform 0.9s cubic-bezier(0.22,1,0.36,1); }
-.ce-edcard:hover .ce-edcard__media img { filter: grayscale(0); transform: scale(1.05); }
+.ce-edcard__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s cubic-bezier(0.22,1,0.36,1); }
+.ce-edcard:hover .ce-edcard__media img { transform: scale(1.05); }
 .ce-edcard__row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: 1.6rem; }
 .ce-edcard__title { font-family: var(--ce-display); font-weight: 800; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1.05; margin: 0; color: var(--ce-fg); font-size: clamp(1.7rem, 1.6vw, 2.3rem); }
 .ce-edcard__caption { margin: 0.8rem 0 0; }
@@ -302,7 +301,7 @@
 .ce-testimonial__attr .ce-label { color: rgba(14,14,14,0.7); }
 .ce-testimonial__attr .ce-label--dim { color: rgba(14,14,14,0.45); }
 .ce-testimonial__media { aspect-ratio: 4 / 5; overflow: hidden; }
-.ce-testimonial__media img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+.ce-testimonial__media img { width: 100%; height: 100%; object-fit: cover; }
 @media screen and (max-width: 749px) {
   .ce-testimonial__inner { grid-template-columns: 1fr; }
   .ce-testimonial__media { order: -1; max-width: 28rem; }
@@ -315,11 +314,10 @@
 .ce-agentura .card .media { border-radius: 0 !important; }
 .ce-agentura .card__media .media img,
 .ce-agentura .card .media img {
-  filter: grayscale(1) contrast(1.04);
-  transition: filter 0.5s ease, transform 0.9s cubic-bezier(0.22,1,0.36,1);
+  transition: transform 0.9s cubic-bezier(0.22,1,0.36,1);
 }
 .ce-agentura .card-wrapper:hover .card__media .media img,
-.ce-agentura .card-wrapper:hover .card .media img { filter: grayscale(0); transform: scale(1.04); }
+.ce-agentura .card-wrapper:hover .card .media img { transform: scale(1.04); }
 .ce-agentura .card__heading,
 .ce-agentura .card__heading a {
   font-family: var(--ce-mono);
