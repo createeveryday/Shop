@@ -345,3 +345,120 @@
   border: 0;
 }
 /* Featured-collection "view all" + slider headings inherit the editorial look already via h2 rules */
+
+/* =====================================================================
+   PHASE 2 — Product, collection & cart pages (CSS-only over Spotlight)
+   ===================================================================== */
+
+/* Sharpen corners globally + mono buttons (editorial) */
+.ce-agentura {
+  --buttons-radius: 0px;
+  --buttons-radius-outset: 0px;
+  --variant-pills-radius: 0px;
+  --inputs-radius: 0px;
+  --popup-corner-radius: 0px;
+}
+.ce-agentura .button {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* ---- Product page ---------------------------------------------------- */
+.ce-agentura .product__title,
+.ce-agentura .product__title h1,
+.ce-agentura .product__title h2 {
+  font-family: var(--ce-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  line-height: 0.98;
+}
+.ce-agentura .product__text.caption-with-letter-spacing,
+.ce-agentura .product__sku,
+.ce-agentura .product__inventory {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.ce-agentura .product .price,
+.ce-agentura .product__info-container .price-item,
+.ce-agentura .product__info-container .price__container {
+  font-family: var(--ce-mono);
+  letter-spacing: 0.05em;
+}
+.ce-agentura .product-form__input--pill input[type='radio'] + label,
+.ce-agentura .product-form__input--pill label {
+  border-radius: 0;
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.ce-agentura .product__accordion .accordion__title,
+.ce-agentura .product__accordion summary {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 1.4rem;
+}
+/* PDP gallery stays in full color (shoppers need real product detail) */
+.ce-agentura .product__media img,
+.ce-agentura .product__modal-opener img { filter: none; }
+
+/* ---- Collection pages ------------------------------------------------ */
+.ce-agentura .collection-hero__title {
+  font-family: var(--ce-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  line-height: 0.95;
+}
+.ce-agentura .collection-hero__description { font-family: var(--ce-mono); text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.6; }
+.ce-agentura .product-count__text,
+.ce-agentura .product-count-vertical,
+.ce-agentura .facet-filters__sort,
+.ce-agentura .facets__summary,
+.ce-agentura .facets__heading,
+.ce-agentura .facet-checkbox__text,
+.ce-agentura .active-facets__button {
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.ce-agentura .facets__price,
+.ce-agentura .facets__summary { letter-spacing: 0.08em; }
+
+/* ---- Cart (drawer + page) ------------------------------------------- */
+.ce-agentura .cart-drawer__heading,
+.ce-agentura .cart__heading,
+.ce-agentura #cart-icon-bubble { letter-spacing: 0.02em; }
+.ce-agentura .cart-item__name {
+  font-family: var(--ce-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  font-size: 1.7rem;
+}
+.ce-agentura .cart-item__price-wrapper,
+.ce-agentura .cart-item__totals,
+.ce-agentura .cart-item__final-price,
+.ce-agentura .totals__total,
+.ce-agentura .totals__total-value,
+.ce-agentura .cart-item__options,
+.ce-agentura .product-option {
+  font-family: var(--ce-mono);
+  letter-spacing: 0.04em;
+}
+.ce-agentura .totals__total { text-transform: uppercase; }
+.ce-agentura .cart__checkout-button,
+.ce-agentura .cart__update-button {
+  border-radius: 0;
+  font-family: var(--ce-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+/* Cart thumbnails keep color for product recognition */
+.ce-agentura .cart-item__image { filter: none; }
