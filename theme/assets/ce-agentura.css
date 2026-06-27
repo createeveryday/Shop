@@ -159,6 +159,12 @@
 .ce-statement__dots { position: absolute; left: 0; right: 0; bottom: 13rem; z-index: 3; display: flex; justify-content: center; gap: .7rem; }
 .ce-statement__dot { width: .7rem; height: .7rem; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.5); cursor: pointer; transition: background .25s ease, transform .25s ease; }
 .ce-statement__dot.is-active { background: #fff; transform: scale(1.35); }
+/* Framing controls */
+.ce-statement__slide { background: #0e0e0e; }
+.ce-statement__media--contain .ce-statement__slide img { object-fit: contain; }
+.ce-statement--ratio-standard .ce-statement__media { aspect-ratio: 16 / 9; }
+.ce-statement--ratio-cinematic .ce-statement__media { aspect-ratio: 21 / 9; }
+.ce-statement--ratio-tall .ce-statement__media { aspect-ratio: 3 / 2; }
 
 .ce-statement__panel {
   position: relative;

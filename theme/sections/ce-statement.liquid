@@ -8,17 +8,20 @@
 {%- liquid
   assign s = section.settings
 -%}
-<section class="ce-statement" {{ section.shopify_attributes }}>
-  <div class="ce-statement__media ce-reveal">
+<section class="ce-statement{% unless s.carousel_ratio == 'default' %} ce-statement--ratio-{{ s.carousel_ratio }}{% endunless %}" {{ section.shopify_attributes }}>
+  <div class="ce-statement__media ce-reveal{% if s.image_fit == 'contain' %} ce-statement__media--contain{% endif %}">
     {%- if section.blocks.size > 0 -%}
       <div class="ce-statement__carousel" data-st-carousel data-autoplay="{{ s.autoplay_speed }}">
         <div class="ce-statement__track" data-st-track>
           {%- for block in section.blocks -%}
+            {%- assign focal = block.settings.focal | default: 'center' -%}
+            {%- assign fstyle = 'object-position: ' | append: focal -%}
             <div class="ce-statement__slide" data-st-slide {{ block.shopify_attributes }}>
               {%- if block.settings.image != blank -%}
                 {{ block.settings.image | image_url: width: 1600 | image_tag:
                   loading: 'lazy', sizes: '100vw',
                   widths: '600, 900, 1200, 1600',
+                  style: fstyle,
                   alt: block.settings.image.alt | escape }}
               {%- else -%}
                 <div class="ce-ph" style="background:#1c1c1c;"></div>
@@ -88,14 +91,45 @@
     { "type": "url", "id": "button_link", "label": "Button link" },
     { "type": "header", "content": "Photo carousel" },
     { "type": "checkbox", "id": "show_arrows", "label": "Show arrows on hover", "default": true },
-    { "type": "range", "id": "autoplay_speed", "min": 0, "max": 8, "step": 1, "unit": "s", "label": "Auto-advance (0 = off)", "default": 4 }
+    { "type": "range", "id": "autoplay_speed", "min": 0, "max": 8, "step": 1, "unit": "s", "label": "Auto-advance (0 = off)", "default": 4 },
+    {
+      "type": "select", "id": "image_fit", "label": "Image fit", "default": "cover",
+      "options": [
+        { "value": "cover", "label": "Fill frame (crop)" },
+        { "value": "contain", "label": "Fit whole photo" }
+      ]
+    },
+    {
+      "type": "select", "id": "carousel_ratio", "label": "Frame shape", "default": "default",
+      "options": [
+        { "value": "default", "label": "Wide (16:7)" },
+        { "value": "standard", "label": "Standard (16:9)" },
+        { "value": "cinematic", "label": "Cinematic (21:9)" },
+        { "value": "tall", "label": "Tall (3:2)" }
+      ]
+    }
   ],
   "blocks": [
     {
       "type": "slide",
       "name": "Photo",
       "settings": [
-        { "type": "image_picker", "id": "image", "label": "Image" }
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        {
+          "type": "select", "id": "focal", "label": "Framing (focal point)", "default": "center",
+          "info": "Which part of the photo stays in frame when cropped.",
+          "options": [
+            { "value": "center", "label": "Center" },
+            { "value": "top", "label": "Top" },
+            { "value": "bottom", "label": "Bottom" },
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" },
+            { "value": "top left", "label": "Top-left" },
+            { "value": "top right", "label": "Top-right" },
+            { "value": "bottom left", "label": "Bottom-left" },
+            { "value": "bottom right", "label": "Bottom-right" }
+          ]
+        }
       ]
     }
   ],
