@@ -135,7 +135,31 @@
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
   transition: transform 1.2s ease;
 }
-.ce-statement:hover .ce-statement__media img { transform: scale(1.03); }
+.ce-statement:hover .ce-statement__media > img { transform: scale(1.03); }
+
+/* Statement image carousel (Instagram-style) — fills the media box */
+.ce-statement__carousel { position: absolute; inset: 0; overflow: hidden; }
+.ce-statement__track { display: flex; height: 100%; width: 100%; transition: transform .6s cubic-bezier(.22,1,.36,1); will-change: transform; }
+.ce-statement__slide { position: relative; flex: 0 0 100%; width: 100%; height: 100%; }
+.ce-statement__nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+  width: 4.4rem; height: 4.4rem; border-radius: 50%; border: 0;
+  background: rgba(0,0,0,.32); color: #fff; cursor: pointer; display: grid; place-items: center;
+  opacity: 0; transition: opacity .25s ease, background .25s ease;
+}
+.ce-statement__carousel:hover .ce-statement__nav { opacity: 1; }
+.ce-statement__nav:hover { background: var(--ce-accent, #ff5f00); }
+.ce-statement__nav--prev { left: 1.2rem; }
+.ce-statement__nav--next { right: 1.2rem; }
+.ce-statement__count {
+  position: absolute; top: 1.4rem; right: 1.4rem; z-index: 3;
+  font-family: var(--ce-mono, monospace); font-size: 1.1rem; letter-spacing: .1em;
+  color: #fff; background: rgba(0,0,0,.45); padding: .5rem .9rem;
+}
+.ce-statement__dots { position: absolute; left: 0; right: 0; bottom: 13rem; z-index: 3; display: flex; justify-content: center; gap: .7rem; }
+.ce-statement__dot { width: .7rem; height: .7rem; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.5); cursor: pointer; transition: background .25s ease, transform .25s ease; }
+.ce-statement__dot.is-active { background: #fff; transform: scale(1.35); }
+
 .ce-statement__panel {
   position: relative;
   margin: -12rem auto 0;
@@ -222,6 +246,8 @@
   .ce-statement__panel { grid-template-columns: 1fr; gap: 2rem; margin-top: -8rem; }
   .ce-statement__right { text-align: left; }
   .ce-statement__media { min-height: 34rem; aspect-ratio: 4 / 5; }
+  .ce-statement__dots { bottom: 9rem; }
+  .ce-statement__nav { display: none; }
   .ce-cursor { display: none; }
 }
 
@@ -229,6 +255,7 @@
   .ce-marquee__track { animation: none; }
   .ce-reveal { opacity: 1; transform: none; transition: none; }
   .ce-statement__media img { transition: none; }
+  .ce-statement__track { transition: none; }
 }
 
 /* ---- Agentura hero --------------------------------------------------- */

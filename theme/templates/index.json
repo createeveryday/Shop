@@ -790,7 +790,61 @@
         "heading": "Creative Direction",
         "button_label": "Explore the work",
         "button_link": "/collections/all"
-      }
+      },
+      "blocks": {
+        "p1": {
+          "type": "slide",
+          "settings": {}
+        },
+        "p2": {
+          "type": "slide",
+          "settings": {}
+        },
+        "p3": {
+          "type": "slide",
+          "settings": {}
+        },
+        "p4": {
+          "type": "slide",
+          "settings": {}
+        },
+        "p5": {
+          "type": "slide",
+          "settings": {}
+        },
+        "p6": {
+          "type": "slide",
+          "settings": {}
+        },
+        "p7": {
+          "type": "slide",
+          "settings": {}
+        },
+        "p8": {
+          "type": "slide",
+          "settings": {}
+        },
+        "p9": {
+          "type": "slide",
+          "settings": {}
+        },
+        "p10": {
+          "type": "slide",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10"
+      ]
     },
     "ce_hero_agentura_1": {
       "type": "ce-hero-agentura",
