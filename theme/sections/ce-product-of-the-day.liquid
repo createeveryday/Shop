@@ -1,9 +1,9 @@
 {% comment %}
   Create+Everyday — Product of the Day
-  Square (1:1) autoplay video on one side, product details on the other.
+  Square (1:1) autoplay video with a row of 4 product-image thumbnails
+  beneath it (open in a lightbox), and product details alongside.
   Pick a product to auto-fill title / price / description / add-to-cart
-  (opens the cart drawer), or use the manual heading/description/button.
-  Self-contained styles + script; uses the global editorial tokens.
+  (opens the cart drawer). Self-contained styles + script.
 {% endcomment %}
 {%- liquid
   assign s = section.settings
@@ -29,24 +29,45 @@
   {{ section.shopify_attributes }}
 >
   <div class="ce-potd__inner">
-    <div class="ce-potd__media ce-reveal">
-      {%- if s.video != blank -%}
-        <video class="ce-potd__video" autoplay muted loop playsinline preload="metadata"
-          {% if poster != blank %}poster="{{ poster | image_url: width: 1200 }}"{% endif %}>
-          {%- for src in s.video.sources -%}<source src="{{ src.url }}" type="{{ src.mime_type }}">{%- endfor -%}
-        </video>
-      {%- elsif s.video_url_mp4 != blank -%}
-        <video class="ce-potd__video" autoplay muted loop playsinline preload="metadata"
-          {% if poster != blank %}poster="{{ poster | image_url: width: 1200 }}"{% endif %}>
-          <source src="{{ s.video_url_mp4 }}" type="video/mp4">
-        </video>
-      {%- elsif poster != blank -%}
-        {{ poster | image_url: width: 1400 | image_tag:
-          loading: 'lazy', sizes: '(min-width:750px) 50vw, 100vw',
-          widths: '500, 800, 1100, 1400', alt: heading | escape }}
-      {%- else -%}
-        <div class="ce-potd__ph"></div>
-      {%- endif -%}
+    <div class="ce-potd__left ce-reveal">
+      <div class="ce-potd__media">
+        {%- if s.video != blank -%}
+          <video class="ce-potd__video" autoplay muted loop playsinline preload="metadata"
+            {% if poster != blank %}poster="{{ poster | image_url: width: 1200 }}"{% endif %}>
+            {%- for src in s.video.sources -%}<source src="{{ src.url }}" type="{{ src.mime_type }}">{%- endfor -%}
+          </video>
+        {%- elsif s.video_url_mp4 != blank -%}
+          <video class="ce-potd__video" autoplay muted loop playsinline preload="metadata"
+            {% if poster != blank %}poster="{{ poster | image_url: width: 1200 }}"{% endif %}>
+            <source src="{{ s.video_url_mp4 }}" type="video/mp4">
+          </video>
+        {%- elsif poster != blank -%}
+          {{ poster | image_url: width: 1400 | image_tag:
+            loading: 'lazy', sizes: '(min-width:750px) 50vw, 100vw',
+            widths: '500, 800, 1100, 1400', alt: heading | escape }}
+        {%- else -%}
+          <div class="ce-potd__ph"></div>
+        {%- endif -%}
+      </div>
+
+      <div class="ce-potd__thumbs">
+        {%- for i in (1..4) -%}
+          {%- liquid
+            assign key = 'thumb_' | append: i
+            assign timg = section.settings[key]
+            if timg == blank and prod != blank
+              assign idx0 = i | minus: 1
+              assign timg = prod.images[idx0]
+            endif
+          -%}
+          {%- if timg != blank -%}
+            <button class="ce-potd__thumb" type="button" data-potd-thumb data-full="{{ timg | image_url: width: 1800 }}" aria-label="View image {{ i }}">
+              {{ timg | image_url: width: 400 | image_tag:
+                loading: 'lazy', sizes: '12rem', widths: '200, 400', alt: heading | escape }}
+            </button>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
     </div>
 
     <div class="ce-potd__content ce-reveal" data-delay="1">
@@ -83,6 +104,19 @@
       </div>
     </div>
   </div>
+
+  <div class="ce-potd__lb" data-potd-lb hidden role="dialog" aria-modal="true" aria-label="Product images">
+    <button class="ce-potd__lb-close" type="button" data-potd-lb-close aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="ce-potd__lb-arrow ce-potd__lb-arrow--prev" type="button" data-potd-lb-prev aria-label="Previous">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="ce-potd__lb-arrow ce-potd__lb-arrow--next" type="button" data-potd-lb-next aria-label="Next">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <div class="ce-potd__lb-media" data-potd-lb-media></div>
+  </div>
 </section>
 
 {%- if prod != blank -%}
@@ -92,10 +126,17 @@
 {% stylesheet %}
 .ce-potd { background: var(--ce-bg, #101010); color: var(--ce-fg, #ededea); padding: clamp(4rem, 8vh, 9rem) var(--ce-gutter, 2rem); }
 .ce-potd__inner { max-width: var(--ce-maxw, 150rem); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2.4rem, 5vw, 7rem); align-items: start; }
+.ce-potd__left { display: flex; flex-direction: column; gap: 1.2rem; }
+.ce-potd--media-right .ce-potd__left { order: 2; }
 .ce-potd__media { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #1c1c1c; }
 .ce-potd__media img, .ce-potd__media video, .ce-potd__ph { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .ce-potd__ph { background: linear-gradient(135deg, #232323, #141414); }
-.ce-potd--media-right .ce-potd__media { order: 2; }
+.ce-potd__thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.ce-potd__thumbs:empty { display: none; }
+.ce-potd__thumb { position: relative; aspect-ratio: 1 / 1; overflow: hidden; padding: 0; border: 1px solid var(--ce-line, rgba(237,237,234,.14)); background: #1c1c1c; cursor: pointer; }
+.ce-potd__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.ce-potd__thumb:hover { border-color: var(--ce-accent, #ff5f00); }
+.ce-potd__thumb:hover img { transform: scale(1.06); }
 .ce-potd__content { display: flex; flex-direction: column; gap: 1.6rem; }
 .ce-potd__heading { margin: 0; font-size: clamp(2.6rem, 4vw, 5rem); }
 .ce-potd__price { font-family: var(--ce-mono, monospace); letter-spacing: .05em; font-size: clamp(1.6rem, 1.8vw, 2.1rem); }
@@ -104,9 +145,21 @@
 .ce-potd__desc > * { margin: 0 0 1rem; }
 .ce-potd__actions { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1rem; align-items: center; }
 .ce-potd__form, .ce-potd__form-wrap { margin: 0; }
+
+/* Lightbox */
+.ce-potd__lb { position: fixed; inset: 0; z-index: 99999; display: flex; align-items: center; justify-content: center; padding: clamp(2rem, 5vw, 6rem); background: rgba(8,8,8,.94); }
+.ce-potd__lb[hidden] { display: none; }
+.ce-potd__lb-media img { max-width: 92vw; max-height: 86vh; width: auto; height: auto; object-fit: contain; display: block; box-shadow: 0 4rem 8rem rgba(0,0,0,.6); }
+.ce-potd__lb-close { position: absolute; top: clamp(1.4rem,3vw,2.6rem); right: clamp(1.4rem,3vw,2.6rem); width: 4.8rem; height: 4.8rem; border-radius: 50%; border: 1px solid var(--ce-line, rgba(237,237,234,.2)); background: transparent; color: var(--ce-fg, #ededea); cursor: pointer; display: grid; place-items: center; transition: color .25s, border-color .25s; }
+.ce-potd__lb-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 5.2rem; height: 5.2rem; border-radius: 50%; border: 1px solid var(--ce-line, rgba(237,237,234,.2)); background: rgba(0,0,0,.3); color: var(--ce-fg, #ededea); cursor: pointer; display: grid; place-items: center; transition: color .25s, border-color .25s; }
+.ce-potd__lb-arrow--prev { left: clamp(1rem,3vw,3rem); }
+.ce-potd__lb-arrow--next { right: clamp(1rem,3vw,3rem); }
+.ce-potd__lb-close:hover, .ce-potd__lb-arrow:hover { border-color: var(--ce-accent, #ff5f00); color: var(--ce-accent, #ff5f00); }
+
 @media screen and (max-width: 749px) {
   .ce-potd__inner { grid-template-columns: 1fr; }
-  .ce-potd--media-right .ce-potd__media { order: 0; }
+  .ce-potd--media-right .ce-potd__left { order: 0; }
+  .ce-potd__lb-arrow { width: 4.2rem; height: 4.2rem; }
 }
 @media (prefers-reduced-motion: reduce) { .ce-potd__media video { display: none; } }
 {% endstylesheet %}
@@ -114,12 +167,16 @@
 {% javascript %}
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function init() {
-    document.querySelectorAll('.ce-potd__video').forEach(function (v) {
-      if (v.dataset.potdReady) return;
-      v.dataset.potdReady = '1';
-      if (reduce) { try { v.removeAttribute('autoplay'); v.pause(); } catch (e) {} return; }
-      if ('IntersectionObserver' in window) {
+
+  function initSection(root) {
+    if (root.dataset.potdReady) return;
+    root.dataset.potdReady = '1';
+
+    /* Square background video */
+    var v = root.querySelector('.ce-potd__video');
+    if (v) {
+      if (reduce) { try { v.removeAttribute('autoplay'); v.pause(); } catch (e) {} }
+      else if ('IntersectionObserver' in window) {
         new IntersectionObserver(function (entries) {
           entries.forEach(function (e) {
             if (e.isIntersecting) { var p = e.target.play(); if (p && p.catch) p.catch(function () {}); }
@@ -127,8 +184,42 @@
           });
         }, { threshold: 0.1 }).observe(v);
       }
+    }
+
+    /* Thumbnails -> lightbox */
+    var thumbs = Array.prototype.slice.call(root.querySelectorAll('[data-potd-thumb]'));
+    var lb = root.querySelector('[data-potd-lb]');
+    if (!thumbs.length || !lb) return;
+    var media = lb.querySelector('[data-potd-lb-media]');
+    var idx = 0;
+
+    function render() {
+      var t = thumbs[idx];
+      media.innerHTML = '';
+      var img = document.createElement('img');
+      var inner = t.querySelector('img');
+      img.src = t.getAttribute('data-full') || (inner ? (inner.currentSrc || inner.src) : '');
+      img.alt = inner ? inner.alt : '';
+      media.appendChild(img);
+    }
+    function open(i) { idx = i; lb.hidden = false; document.documentElement.style.overflow = 'hidden'; render(); }
+    function close() { lb.hidden = true; document.documentElement.style.overflow = ''; media.innerHTML = ''; }
+    function step(d) { idx = (idx + d + thumbs.length) % thumbs.length; render(); }
+
+    thumbs.forEach(function (t, i) { t.addEventListener('click', function () { open(i); }); });
+    lb.querySelector('[data-potd-lb-close]').addEventListener('click', close);
+    lb.querySelector('[data-potd-lb-prev]').addEventListener('click', function () { step(-1); });
+    lb.querySelector('[data-potd-lb-next]').addEventListener('click', function () { step(1); });
+    lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (lb.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') step(-1);
+      else if (e.key === 'ArrowRight') step(1);
     });
   }
+
+  function init() { document.querySelectorAll('.ce-potd').forEach(initSection); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
   document.addEventListener('shopify:section:load', init);
@@ -147,6 +238,12 @@
     { "type": "video", "id": "video", "label": "Video (Shopify-hosted)", "info": "Autoplays muted and looped. Shown square." },
     { "type": "text", "id": "video_url_mp4", "label": "Or direct MP4 URL" },
     { "type": "image_picker", "id": "poster", "label": "Poster / fallback image", "info": "Used as the video poster, or shown if no video is set. Defaults to the product image." },
+    { "type": "header", "content": "Thumbnails (open in lightbox)" },
+    { "type": "paragraph", "content": "Leave blank to use the product's first 4 images." },
+    { "type": "image_picker", "id": "thumb_1", "label": "Thumbnail 1" },
+    { "type": "image_picker", "id": "thumb_2", "label": "Thumbnail 2" },
+    { "type": "image_picker", "id": "thumb_3", "label": "Thumbnail 3" },
+    { "type": "image_picker", "id": "thumb_4", "label": "Thumbnail 4" },
     { "type": "header", "content": "Content (overrides)" },
     { "type": "text", "id": "heading", "label": "Heading", "info": "Leave blank to use the product title." },
     { "type": "richtext", "id": "description", "label": "Description", "info": "Leave blank to use the product description." },
