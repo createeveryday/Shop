@@ -813,7 +813,8 @@
         "show_view_link": true,
         "view_label": "View details",
         "media_position": "left",
-        "color_scheme": "background-1"
+        "color_scheme": "background-1",
+        "video": "shopify://files/videos/product-of-the-day.mp4"
       }
     }
   },
