@@ -68,20 +68,6 @@
           {%- endif -%}
         {%- endfor -%}
       </div>
-    </div>
-
-    <div class="ce-potd__content ce-reveal" data-delay="1">
-      {%- if s.label != blank -%}<span class="ce-label ce-label--accent">{{ s.label | escape }}</span>{%- endif -%}
-      {%- if heading != blank -%}<h2 class="ce-potd__heading ce-display">{{ heading | escape }}</h2>{%- endif -%}
-
-      {%- if s.show_price and prod != blank -%}
-        <div class="ce-potd__price">
-          {{ prod.price | money }}
-          {%- if prod.compare_at_price > prod.price -%}<s>{{ prod.compare_at_price | money }}</s>{%- endif -%}
-        </div>
-      {%- endif -%}
-
-      {%- if desc != blank -%}<div class="ce-potd__desc rte">{{ desc }}</div>{%- endif -%}
 
       <div class="ce-potd__actions">
         {%- if prod != blank -%}
@@ -102,6 +88,20 @@
           <a class="ce-btn" href="{{ s.button_link }}">{{ s.button_label | escape }}</a>
         {%- endif -%}
       </div>
+    </div>
+
+    <div class="ce-potd__content ce-reveal" data-delay="1">
+      {%- if s.label != blank -%}<span class="ce-label ce-label--accent">{{ s.label | escape }}</span>{%- endif -%}
+      {%- if heading != blank -%}<h2 class="ce-potd__heading ce-display">{{ heading | escape }}</h2>{%- endif -%}
+
+      {%- if s.show_price and prod != blank -%}
+        <div class="ce-potd__price">
+          {{ prod.price | money }}
+          {%- if prod.compare_at_price > prod.price -%}<s>{{ prod.compare_at_price | money }}</s>{%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if desc != blank -%}<div class="ce-potd__desc rte">{{ desc }}</div>{%- endif -%}
     </div>
   </div>
 
