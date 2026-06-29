@@ -1003,6 +1003,20 @@
         "g7",
         "g8"
       ]
+    },
+    "ce_potd_1": {
+      "type": "ce-product-of-the-day",
+      "settings": {
+        "label": "Product of the Day",
+        "heading": "Today's Drop",
+        "description": "<p>A limited feature, refreshed daily. Pick a product in the theme editor to auto-fill its details and add-to-cart.</p>",
+        "show_price": true,
+        "button_label": "Add to cart",
+        "show_view_link": true,
+        "view_label": "View details",
+        "media_position": "left",
+        "color_scheme": "background-1"
+      }
     }
   },
   "order": [
@@ -1011,6 +1025,7 @@
     "ce_marquee_1",
     "ce_statement_1",
     "ce_editorial_cards_1",
+    "ce_potd_1",
     "custom_liquid_QHhqLA",
     "slideshow_wkehGc",
     "raw_ELphcG",
