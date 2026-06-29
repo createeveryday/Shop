@@ -1,0 +1,149 @@
+{% comment %}
+  Create+Everyday — Featured YouTube
+  Lightweight click-to-play YouTube embed (the player loads only on click)
+  next to channel copy + a Subscribe button. Paste a YouTube video URL
+  (watch / youtu.be / embed / shorts / live) or a raw video ID.
+  Self-contained styles + script; uses the global editorial tokens.
+{% endcomment %}
+{%- liquid
+  assign s = section.settings
+  assign raw = s.youtube_url | default: ''
+  assign vid = ''
+  if raw contains 'watch?v='
+    assign vid = raw | split: 'watch?v=' | last | split: '&' | first | split: '#' | first
+  elsif raw contains 'youtu.be/'
+    assign vid = raw | split: 'youtu.be/' | last | split: '?' | first | split: '&' | first
+  elsif raw contains '/embed/'
+    assign vid = raw | split: '/embed/' | last | split: '?' | first
+  elsif raw contains '/shorts/'
+    assign vid = raw | split: '/shorts/' | last | split: '?' | first
+  elsif raw contains '/live/'
+    assign vid = raw | split: '/live/' | last | split: '?' | first
+  elsif raw != blank
+    assign vid = raw
+  endif
+  assign vid = vid | strip
+
+  assign thumb = ''
+  if s.poster != blank
+    assign thumb = s.poster | image_url: width: 1600
+  elsif vid != blank
+    assign thumb = 'https://i.ytimg.com/vi/' | append: vid | append: '/maxresdefault.jpg'
+  endif
+-%}
+<section
+  class="ce-yt ce-yt--media-{{ s.media_position }} color-{{ s.color_scheme }}"
+  {{ section.shopify_attributes }}
+>
+  <div class="ce-yt__inner">
+    <div class="ce-yt__media-col ce-reveal">
+      <div class="ce-yt__media">
+        {%- if vid != blank -%}
+          <button class="ce-yt__facade" type="button" data-yt="{{ vid }}" aria-label="Play video">
+            {%- if thumb != blank -%}
+              <img class="ce-yt__thumb" src="{{ thumb }}" alt="" loading="lazy"
+                {% if s.poster == blank %}onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/{{ vid }}/hqdefault.jpg'"{% endif %}>
+            {%- endif -%}
+            <span class="ce-yt__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </button>
+        {%- else -%}
+          <a class="ce-yt__facade ce-yt__facade--empty" href="{{ s.channel_url | default: 'https://www.youtube.com/@CreateEverydayStudios' }}" target="_blank" rel="noopener" aria-label="Visit our YouTube channel">
+            <span class="ce-yt__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="ce-yt__content ce-reveal" data-delay="1">
+      {%- if s.label != blank -%}<span class="ce-label ce-label--accent">{{ s.label | escape }}</span>{%- endif -%}
+      {%- if s.heading != blank -%}<h2 class="ce-yt__heading ce-display">{{ s.heading | escape }}</h2>{%- endif -%}
+      {%- if s.description != blank -%}<div class="ce-yt__desc rte">{{ s.description }}</div>{%- endif -%}
+      {%- if s.button_label != blank and s.channel_url != blank -%}
+        <div>
+          <a class="ce-btn ce-yt__btn" href="{{ s.channel_url }}" target="_blank" rel="noopener">
+            <svg class="ce-yt__btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z" fill="currentColor"/></svg>
+            {{ s.button_label | escape }}
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.ce-yt { background: var(--ce-bg, #101010); color: var(--ce-fg, #ededea); padding: clamp(4rem, 8vh, 9rem) var(--ce-gutter, 2rem); }
+.ce-yt__inner { max-width: var(--ce-maxw, 150rem); margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(2.4rem, 5vw, 7rem); align-items: center; }
+.ce-yt--media-right .ce-yt__media-col { order: 2; }
+.ce-yt__media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #000; box-shadow: 0 3rem 6rem rgba(0,0,0,.5); }
+.ce-yt__facade { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; cursor: pointer; display: grid; place-items: center; background: #000; }
+.ce-yt__thumb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ce-yt__facade::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.28); transition: background .3s ease; }
+.ce-yt__facade:hover::after { background: rgba(0,0,0,.12); }
+.ce-yt__play { position: relative; z-index: 2; width: 7.2rem; height: 5rem; border-radius: 1.2rem; background: #ff0000; display: grid; place-items: center; transition: transform .25s ease, background .25s ease; }
+.ce-yt__facade:hover .ce-yt__play { transform: scale(1.08); }
+.ce-yt__play svg { width: 2.6rem; height: 2.6rem; color: #fff; margin-left: .2rem; }
+.ce-yt__iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.ce-yt__content { display: flex; flex-direction: column; gap: 1.6rem; }
+.ce-yt__heading { margin: 0; font-size: clamp(2.6rem, 4vw, 5rem); }
+.ce-yt__desc { color: var(--ce-fg-dim, rgba(237,237,234,.62)); line-height: 1.7; max-width: 46rem; }
+.ce-yt__desc > * { margin: 0 0 1rem; }
+.ce-yt__btn-icon { width: 2rem; height: 2rem; }
+@media screen and (max-width: 749px) {
+  .ce-yt__inner { grid-template-columns: 1fr; }
+  .ce-yt--media-right .ce-yt__media-col { order: 0; }
+}
+{% endstylesheet %}
+
+{% javascript %}
+(function () {
+  function init() {
+    document.querySelectorAll('.ce-yt__facade[data-yt]').forEach(function (btn) {
+      if (btn.dataset.ytReady) return;
+      btn.dataset.ytReady = '1';
+      btn.addEventListener('click', function () {
+        var id = btn.getAttribute('data-yt');
+        var f = document.createElement('iframe');
+        f.className = 'ce-yt__iframe';
+        f.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
+        f.title = 'YouTube video player';
+        f.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+        f.setAttribute('allowfullscreen', '');
+        btn.replaceWith(f);
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+  document.addEventListener('shopify:section:load', init);
+})();
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Featured YouTube",
+  "tag": "section",
+  "class": "ce-section",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Eyebrow label", "default": "Watch" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Create Everyday Studios" },
+    { "type": "richtext", "id": "description", "label": "Description", "default": "<p>New drops, process films and behind-the-scenes — straight from the studio. Subscribe so you never miss a release.</p>" },
+    { "type": "header", "content": "Video" },
+    { "type": "text", "id": "youtube_url", "label": "YouTube video link or ID", "info": "Paste a watch / youtu.be / embed / shorts / live URL, or just the 11-character video ID." },
+    { "type": "image_picker", "id": "poster", "label": "Custom thumbnail (optional)", "info": "Defaults to the video's YouTube thumbnail." },
+    { "type": "header", "content": "Channel" },
+    { "type": "url", "id": "channel_url", "label": "Channel URL" },
+    { "type": "text", "id": "button_label", "label": "Subscribe button label", "default": "Subscribe on YouTube" },
+    { "type": "header", "content": "Layout" },
+    {
+      "type": "select", "id": "media_position", "label": "Video position", "default": "left",
+      "options": [ { "value": "left", "label": "Left" }, { "value": "right", "label": "Right" } ]
+    },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "background-1" }
+  ],
+  "presets": [{ "name": "Featured YouTube" }]
+}
+{% endschema %}
