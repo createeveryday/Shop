@@ -1,0 +1,307 @@
+{% comment %}
+  Create+Everyday — Poster Prints photo grid
+  Dense, uneven photo-wall grid (Pinterest-style masonry via CSS grid +
+  size variants per block). Every tile opens a full-screen lightbox with
+  prev/next navigation; an optional product link ("Shop this print") can
+  be set per block and surfaces both as a corner tag on the tile and as a
+  CTA inside the lightbox. Self-contained styles + script below.
+{% endcomment %}
+{%- liquid
+  assign s = section.settings
+-%}
+<section class="ce-poster-grid" data-ce-poster-grid {{ section.shopify_attributes }} style="--ce-pg-gap: {{ s.gap }}px;">
+  {%- if s.label != blank or s.heading != blank or s.subheading != blank -%}
+    <div class="ce-poster-grid__head">
+      {%- if s.label != blank -%}<span class="ce-label ce-label--accent ce-reveal">{{ s.label | escape }}</span>{%- endif -%}
+      {%- if s.heading != blank -%}<h2 class="ce-poster-grid__heading ce-display ce-reveal" data-delay="1">{{ s.heading | escape }}</h2>{%- endif -%}
+      {%- if s.subheading != blank -%}<p class="ce-poster-grid__sub ce-reveal" data-delay="2">{{ s.subheading | escape }}</p>{%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="ce-poster-grid__grid">
+      {%- for block in section.blocks -%}
+        {%- assign b = block.settings -%}
+        {%- assign p = b.product -%}
+        <div class="ce-poster-grid__cell" data-size="{{ b.size }}" {{ block.shopify_attributes }}>
+          <button
+            type="button"
+            class="ce-poster-grid__trigger"
+            data-full="{% if b.image != blank %}{{ b.image | image_url: width: 2000 }}{% endif %}"
+            data-caption="{{ b.title | escape }}"
+            data-product-url="{% if p != blank %}{{ p.url }}{% endif %}"
+            data-product-title="{% if p != blank %}{{ p.title | escape }}{% endif %}"
+            data-product-price="{% if p != blank %}{{ p.price | money | escape }}{% endif %}"
+            aria-label="{% if b.title != blank %}View {{ b.title | escape }}{% else %}View poster{% endif %}"
+          >
+            {%- if b.image != blank -%}
+              {{ b.image | image_url: width: 1200 | image_tag:
+                loading: 'lazy', sizes: '(min-width:990px) 33vw, 50vw',
+                widths: '400, 600, 900, 1200', alt: b.title | default: p.title | escape }}
+            {%- else -%}
+              <div class="ce-poster-grid__ph"></div>
+            {%- endif -%}
+            {%- if b.title != blank -%}
+              <span class="ce-poster-grid__cap">{{ b.title | escape }}</span>
+            {%- endif -%}
+          </button>
+          {%- if p != blank -%}
+            <a class="ce-poster-grid__shop" href="{{ p.url }}" aria-label="Shop {{ p.title | escape }}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 6 5 2H2m3 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm11 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" stroke="currentColor" stroke-width="2"/></svg>
+              <span>{{ s.shop_label | escape }}</span>
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  {%- if s.more_label != blank and s.more_link != blank -%}
+    <div class="ce-poster-grid__foot">
+      <a class="ce-btn ce-poster-grid__more" href="{{ s.more_link }}">
+        {{ s.more_label | escape }}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2"/></svg>
+      </a>
+    </div>
+  {%- endif -%}
+
+  <div class="ce-poster-grid__lightbox" data-pg-lightbox hidden role="dialog" aria-modal="true" aria-label="Poster viewer">
+    <button class="ce-poster-grid__lb-close" type="button" data-pg-close aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="ce-poster-grid__lb-arrow ce-poster-grid__lb-arrow--prev" type="button" data-pg-prev aria-label="Previous">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button class="ce-poster-grid__lb-arrow ce-poster-grid__lb-arrow--next" type="button" data-pg-next aria-label="Next">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <figure class="ce-poster-grid__lb-figure">
+      <div class="ce-poster-grid__lb-media" data-pg-media></div>
+      <figcaption class="ce-poster-grid__lb-cap">
+        <span class="ce-poster-grid__lb-title" data-pg-title></span>
+        <a class="ce-btn ce-poster-grid__lb-shop" data-pg-shop hidden>
+          <span data-pg-shop-label></span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2"/></svg>
+        </a>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+{% stylesheet %}
+.ce-poster-grid { background: var(--ce-bg, #101010); color: var(--ce-fg, #ededea); padding: clamp(4rem, 8vh, 9rem) 0; }
+.ce-poster-grid__head { text-align: center; max-width: 60rem; margin: 0 auto clamp(2.2rem, 4vw, 3.4rem); padding: 0 var(--ce-gutter, 2rem); }
+.ce-poster-grid__head .ce-label { display: block; margin-bottom: 1.2rem; }
+.ce-poster-grid__heading { margin: 0; font-size: clamp(3rem, 5vw, 6rem); }
+.ce-poster-grid__sub { margin: 1.6rem 0 0; color: var(--ce-fg-dim, rgba(237,237,234,.58)); font-size: clamp(1.5rem, 1.4vw, 1.8rem); line-height: 1.6; }
+
+.ce-poster-grid__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 22vw;
+  grid-auto-flow: dense;
+  gap: var(--ce-pg-gap, 8px);
+  padding: 0 var(--ce-pg-gap, 8px);
+}
+@media screen and (min-width: 750px) {
+  .ce-poster-grid__grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 13vw; }
+}
+
+.ce-poster-grid__cell { position: relative; }
+.ce-poster-grid__cell[data-size="2x1"] { grid-column: span 2; }
+.ce-poster-grid__cell[data-size="1x2"] { grid-row: span 2; }
+.ce-poster-grid__cell[data-size="2x2"] { grid-column: span 2; grid-row: span 2; }
+
+.ce-poster-grid__trigger { display: block; position: relative; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: #161616; cursor: pointer; overflow: hidden; }
+.ce-poster-grid__trigger img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.22,1,.36,1); }
+.ce-poster-grid__trigger:hover img { transform: scale(1.05); }
+.ce-poster-grid__ph { position: absolute; inset: 0; background: linear-gradient(135deg, #232323, #141414); }
+.ce-poster-grid__cap {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 1.4rem 1.6rem;
+  background: linear-gradient(transparent, rgba(0,0,0,.75));
+  font-family: var(--ce-display, sans-serif); font-weight: 700; text-transform: uppercase;
+  letter-spacing: -0.01em; color: #fff; font-size: clamp(1.2rem, 1.3vw, 1.6rem);
+  text-align: left; opacity: 0; transform: translateY(.6rem); transition: opacity .3s, transform .3s;
+}
+.ce-poster-grid__trigger:hover .ce-poster-grid__cap,
+.ce-poster-grid__trigger:focus-visible .ce-poster-grid__cap { opacity: 1; transform: none; }
+
+.ce-poster-grid__shop {
+  position: absolute; top: 1rem; right: 1rem; z-index: 2;
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: .8rem 1.2rem; border-radius: 999px;
+  background: rgba(16,16,16,.72); backdrop-filter: blur(6px);
+  border: 1px solid rgba(237,237,234,.24);
+  color: var(--ce-fg, #ededea); text-decoration: none;
+  font-family: var(--ce-mono, monospace); font-size: 1.1rem; text-transform: uppercase; letter-spacing: .06em;
+  opacity: 0; transform: translateY(-.4rem);
+  transition: opacity .25s, transform .25s, background .25s, border-color .25s, color .25s;
+}
+.ce-poster-grid__cell:hover .ce-poster-grid__shop,
+.ce-poster-grid__shop:focus-visible { opacity: 1; transform: none; }
+.ce-poster-grid__shop:hover { background: var(--ce-accent, #ff5f00); border-color: transparent; color: #fff; }
+.ce-poster-grid__shop span { white-space: nowrap; }
+
+.ce-poster-grid__foot { display: flex; justify-content: center; margin-top: clamp(2.4rem, 4vw, 3.6rem); }
+
+@media (hover: none) {
+  .ce-poster-grid__cap, .ce-poster-grid__shop { opacity: 1; transform: none; }
+}
+
+/* Lightbox */
+.ce-poster-grid__lightbox { position: fixed; inset: 0; z-index: 99999; display: flex; align-items: center; justify-content: center; padding: clamp(2rem, 5vw, 6rem); background: rgba(8,8,8,.94); }
+.ce-poster-grid__lightbox[hidden] { display: none; }
+.ce-poster-grid__lb-figure { margin: 0; max-width: 92vw; display: flex; flex-direction: column; gap: 1.6rem; align-items: center; }
+.ce-poster-grid__lb-media { display: flex; align-items: center; justify-content: center; }
+.ce-poster-grid__lb-media img { max-width: 92vw; max-height: 74vh; width: auto; height: auto; object-fit: contain; display: block; box-shadow: 0 4rem 8rem rgba(0,0,0,.6); }
+.ce-poster-grid__lb-cap { display: flex; flex-direction: column; gap: 1.2rem; align-items: center; text-align: center; color: var(--ce-fg, #ededea); }
+.ce-poster-grid__lb-title { font-family: var(--ce-display, sans-serif); text-transform: uppercase; font-weight: 800; letter-spacing: -0.01em; font-size: clamp(1.8rem, 2.4vw, 2.6rem); }
+.ce-poster-grid__lb-title:empty { display: none; }
+.ce-poster-grid__lb-shop { text-decoration: none; }
+.ce-poster-grid__lb-close { position: absolute; top: clamp(1.4rem, 3vw, 2.6rem); right: clamp(1.4rem, 3vw, 2.6rem); width: 4.8rem; height: 4.8rem; border-radius: 50%; border: 1px solid var(--ce-line, rgba(237,237,234,.2)); background: transparent; color: var(--ce-fg, #ededea); cursor: pointer; display: grid; place-items: center; transition: color .25s, border-color .25s; }
+.ce-poster-grid__lb-close:hover { border-color: var(--ce-accent, #ff5f00); color: var(--ce-accent, #ff5f00); }
+.ce-poster-grid__lb-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 5.2rem; height: 5.2rem; border-radius: 50%; border: 1px solid var(--ce-line, rgba(237,237,234,.2)); background: rgba(0,0,0,.3); color: var(--ce-fg, #ededea); cursor: pointer; display: grid; place-items: center; transition: color .25s, border-color .25s; }
+.ce-poster-grid__lb-arrow:hover { border-color: var(--ce-accent, #ff5f00); color: var(--ce-accent, #ff5f00); }
+.ce-poster-grid__lb-arrow--prev { left: clamp(1rem, 3vw, 3rem); }
+.ce-poster-grid__lb-arrow--next { right: clamp(1rem, 3vw, 3rem); }
+@media screen and (max-width: 749px) { .ce-poster-grid__lb-arrow { width: 4.2rem; height: 4.2rem; } }
+@media (prefers-reduced-motion: reduce) {
+  .ce-poster-grid__trigger img { transition: none; }
+  .ce-poster-grid__cap, .ce-poster-grid__shop { transition: none; }
+}
+{% endstylesheet %}
+
+{% javascript %}
+(function () {
+  function initPosterGrid(root) {
+    if (root.dataset.pgReady) return;
+    root.dataset.pgReady = '1';
+
+    var tiles = Array.prototype.slice.call(root.querySelectorAll('.ce-poster-grid__trigger'));
+    var lb = root.querySelector('[data-pg-lightbox]');
+    if (!tiles.length || !lb) return;
+
+    var media = lb.querySelector('[data-pg-media]');
+    var titleEl = lb.querySelector('[data-pg-title]');
+    var shopEl = lb.querySelector('[data-pg-shop]');
+    var shopLabelEl = lb.querySelector('[data-pg-shop-label]');
+    var idx = 0;
+
+    function render() {
+      var tile = tiles[idx];
+      if (!tile) return;
+      var full = tile.getAttribute('data-full');
+      var img = tile.querySelector('img');
+      media.innerHTML = '';
+      if (full || img) {
+        var el = document.createElement('img');
+        el.src = full || (img ? (img.currentSrc || img.src) : '');
+        el.alt = tile.getAttribute('data-caption') || '';
+        media.appendChild(el);
+      }
+      titleEl.textContent = tile.getAttribute('data-caption') || '';
+      var productUrl = tile.getAttribute('data-product-url');
+      if (productUrl) {
+        shopEl.href = productUrl;
+        var price = tile.getAttribute('data-product-price');
+        var pTitle = tile.getAttribute('data-product-title');
+        shopLabelEl.textContent = price ? (pTitle + ' — ' + price) : (pTitle || 'Shop this print');
+        shopEl.hidden = false;
+      } else {
+        shopEl.hidden = true;
+        shopEl.removeAttribute('href');
+      }
+    }
+
+    function open(i) {
+      idx = i;
+      lb.hidden = false;
+      document.documentElement.style.overflow = 'hidden';
+      render();
+    }
+    function close() {
+      lb.hidden = true;
+      document.documentElement.style.overflow = '';
+      media.innerHTML = '';
+    }
+    function step(d) { open((idx + d + tiles.length) % tiles.length); }
+
+    tiles.forEach(function (tile, i) {
+      tile.addEventListener('click', function () { open(i); });
+    });
+
+    lb.querySelector('[data-pg-close]').addEventListener('click', close);
+    lb.querySelector('[data-pg-prev]').addEventListener('click', function () { step(-1); });
+    lb.querySelector('[data-pg-next]').addEventListener('click', function () { step(1); });
+    lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (lb.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') step(-1);
+      else if (e.key === 'ArrowRight') step(1);
+    });
+  }
+
+  function initAll() { document.querySelectorAll('[data-ce-poster-grid]').forEach(initPosterGrid); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initAll);
+  else initAll();
+  document.addEventListener('shopify:section:load', initAll);
+})();
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Poster grid",
+  "tag": "section",
+  "class": "ce-section",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Eyebrow label", "default": "Prints" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Poster Prints" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Museum-grade prints of the collection. Tap any piece to view it full-screen — or shop it directly." },
+    { "type": "range", "id": "gap", "min": 0, "max": 24, "step": 2, "unit": "px", "label": "Grid gap", "default": 8 },
+    { "type": "text", "id": "shop_label", "label": "\"Shop\" tag label (on hover)", "default": "Shop print" },
+    { "type": "header", "content": "View more link (optional)" },
+    { "type": "text", "id": "more_label", "label": "Button label" },
+    { "type": "url", "id": "more_link", "label": "Button link" }
+  ],
+  "blocks": [
+    {
+      "type": "poster",
+      "name": "Poster",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Caption / title" },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "Grid size",
+          "options": [
+            { "value": "1x1", "label": "Standard" },
+            { "value": "2x1", "label": "Wide" },
+            { "value": "1x2", "label": "Tall" },
+            { "value": "2x2", "label": "Large" }
+          ],
+          "default": "1x1"
+        },
+        { "type": "product", "id": "product", "label": "Link to poster (optional)", "info": "Adds a \"Shop print\" tag on the tile and a shop button in the lightbox." }
+      ]
+    }
+  ],
+  "max_blocks": 40,
+  "presets": [
+    {
+      "name": "Poster grid",
+      "blocks": [
+        { "type": "poster", "settings": { "title": "", "size": "2x2" } },
+        { "type": "poster", "settings": { "title": "", "size": "1x1" } },
+        { "type": "poster", "settings": { "title": "", "size": "1x2" } },
+        { "type": "poster", "settings": { "title": "", "size": "1x1" } },
+        { "type": "poster", "settings": { "title": "", "size": "2x1" } },
+        { "type": "poster", "settings": { "title": "", "size": "1x1" } },
+        { "type": "poster", "settings": { "title": "", "size": "1x1" } },
+        { "type": "poster", "settings": { "title": "", "size": "1x2" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

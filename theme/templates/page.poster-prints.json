@@ -1,0 +1,72 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ce_poster_grid_main": {
+      "type": "ce-poster-grid",
+      "blocks": {
+        "poster_1": {
+          "type": "poster",
+          "settings": { "title": "", "size": "2x2" }
+        },
+        "poster_2": {
+          "type": "poster",
+          "settings": { "title": "", "size": "1x1" }
+        },
+        "poster_3": {
+          "type": "poster",
+          "settings": { "title": "", "size": "1x2" }
+        },
+        "poster_4": {
+          "type": "poster",
+          "settings": { "title": "", "size": "1x1" }
+        },
+        "poster_5": {
+          "type": "poster",
+          "settings": { "title": "", "size": "2x1" }
+        },
+        "poster_6": {
+          "type": "poster",
+          "settings": { "title": "", "size": "1x1" }
+        },
+        "poster_7": {
+          "type": "poster",
+          "settings": { "title": "", "size": "1x1" }
+        },
+        "poster_8": {
+          "type": "poster",
+          "settings": { "title": "", "size": "1x2" }
+        }
+      },
+      "block_order": [
+        "poster_1",
+        "poster_2",
+        "poster_3",
+        "poster_4",
+        "poster_5",
+        "poster_6",
+        "poster_7",
+        "poster_8"
+      ],
+      "settings": {
+        "label": "Prints",
+        "heading": "Poster Prints",
+        "subheading": "Museum-grade prints of the collection. Tap any piece to view it full-screen — or shop it directly.",
+        "gap": 8,
+        "shop_label": "Shop print",
+        "more_label": "",
+        "more_link": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ce_poster_grid_main"
+  ]
+}

@@ -254,6 +254,94 @@
         "more_link": "https://www.instagram.com/thisistwizz/"
       }
     },
+    "ce_poster_grid_home": {
+      "type": "ce-poster-grid",
+      "blocks": {
+        "poster_1": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/tbot_keyart_v01_2026-06-09_07.png",
+            "title": "",
+            "size": "2x2"
+          }
+        },
+        "poster_2": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/6-15-26Artboard-8.png",
+            "title": "",
+            "size": "1x1"
+          }
+        },
+        "poster_3": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/933A9912-6157-4E6D-ABF8-A539ED03640C.png",
+            "title": "",
+            "size": "1x2"
+          }
+        },
+        "poster_4": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/MICHAEL_JORDAN_BLACK.png",
+            "title": "",
+            "size": "1x1"
+          }
+        },
+        "poster_5": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/tbot_keyart_v07_2026-06-16_11.png",
+            "title": "",
+            "size": "2x1"
+          }
+        },
+        "poster_6": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/tbot_keyart_v01_2026-06-09_03_03.png",
+            "title": "",
+            "size": "1x1"
+          }
+        },
+        "poster_7": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/lwwArtboard-3.png",
+            "title": "",
+            "size": "1x1"
+          }
+        },
+        "poster_8": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/june-6Artboard-17.png",
+            "title": "",
+            "size": "1x2"
+          }
+        }
+      },
+      "block_order": [
+        "poster_1",
+        "poster_2",
+        "poster_3",
+        "poster_4",
+        "poster_5",
+        "poster_6",
+        "poster_7",
+        "poster_8"
+      ],
+      "settings": {
+        "label": "Prints",
+        "heading": "Poster Prints",
+        "subheading": "Museum-grade prints of the collection. Tap any piece to view it full-screen — or shop it directly.",
+        "gap": 8,
+        "shop_label": "Shop print",
+        "more_label": "Shop all posters",
+        "more_link": "/pages/poster-prints"
+      }
+    },
     "custom_liquid_QHhqLA": {
       "type": "custom-liquid",
       "disabled": true,
@@ -841,6 +929,7 @@
     "ce_potd_real",
     "ce_editorial_cards_1",
     "ce_gallery_xfRDhC",
+    "ce_poster_grid_home",
     "custom_liquid_QHhqLA",
     "raw_ELphcG",
     "featured_collection_pkGJRg",
