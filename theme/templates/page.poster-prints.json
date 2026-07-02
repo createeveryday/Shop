@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -13,35 +22,69 @@
       "blocks": {
         "poster_1": {
           "type": "poster",
-          "settings": { "title": "", "size": "2x2" }
+          "settings": {
+            "image": "shopify://shop_images/4-15-26Artboard-5.png",
+            "title": "KOBE",
+            "size": "1x2",
+            "product": "the-world-needs-your-art-tee"
+          }
         },
         "poster_2": {
           "type": "poster",
-          "settings": { "title": "", "size": "1x1" }
+          "settings": {
+            "image": "shopify://shop_images/HAMMERArtboard-8.png",
+            "title": "",
+            "size": "1x2",
+            "product": "create-everyday-flagship-t-shirt"
+          }
         },
         "poster_3": {
           "type": "poster",
-          "settings": { "title": "", "size": "1x2" }
+          "settings": {
+            "title": "",
+            "size": "1x2",
+            "product": ""
+          }
         },
         "poster_4": {
           "type": "poster",
-          "settings": { "title": "", "size": "1x1" }
+          "settings": {
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
         },
         "poster_5": {
           "type": "poster",
-          "settings": { "title": "", "size": "2x1" }
+          "settings": {
+            "title": "",
+            "size": "2x1",
+            "product": ""
+          }
         },
         "poster_6": {
           "type": "poster",
-          "settings": { "title": "", "size": "1x1" }
+          "settings": {
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
         },
         "poster_7": {
           "type": "poster",
-          "settings": { "title": "", "size": "1x1" }
+          "settings": {
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
         },
         "poster_8": {
           "type": "poster",
-          "settings": { "title": "", "size": "1x2" }
+          "settings": {
+            "title": "",
+            "size": "1x2",
+            "product": ""
+          }
         }
       },
       "block_order": [
@@ -55,9 +98,98 @@
         "poster_8"
       ],
       "settings": {
-        "label": "Prints",
-        "heading": "Poster Prints",
+        "label": "+everyday",
+        "heading": "Prints",
         "subheading": "Museum-grade prints of the collection. Tap any piece to view it full-screen — or shop it directly.",
+        "gap": 24,
+        "shop_label": "Shop print",
+        "more_label": "More",
+        "more_link": "shopify://pages/poster-prints"
+      }
+    },
+    "ce_poster_grid_inDnGV": {
+      "type": "ce-poster-grid",
+      "blocks": {
+        "poster_PNhk7F": {
+          "type": "poster",
+          "settings": {
+            "title": "",
+            "size": "2x2",
+            "product": ""
+          }
+        },
+        "poster_iUJNKM": {
+          "type": "poster",
+          "settings": {
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
+        },
+        "poster_XjKNcW": {
+          "type": "poster",
+          "settings": {
+            "title": "",
+            "size": "1x2",
+            "product": ""
+          }
+        },
+        "poster_qBCyXY": {
+          "type": "poster",
+          "settings": {
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
+        },
+        "poster_jH8KBK": {
+          "type": "poster",
+          "settings": {
+            "title": "",
+            "size": "2x1",
+            "product": ""
+          }
+        },
+        "poster_3t6n6d": {
+          "type": "poster",
+          "settings": {
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
+        },
+        "poster_9bKDhD": {
+          "type": "poster",
+          "settings": {
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
+        },
+        "poster_zEKJw3": {
+          "type": "poster",
+          "settings": {
+            "title": "",
+            "size": "1x2",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "poster_PNhk7F",
+        "poster_iUJNKM",
+        "poster_XjKNcW",
+        "poster_qBCyXY",
+        "poster_jH8KBK",
+        "poster_3t6n6d",
+        "poster_9bKDhD",
+        "poster_zEKJw3"
+      ],
+      "name": "Poster grid",
+      "settings": {
+        "label": "",
+        "heading": "",
+        "subheading": "",
         "gap": 8,
         "shop_label": "Shop print",
         "more_label": "",
@@ -67,6 +199,7 @@
   },
   "order": [
     "main",
-    "ce_poster_grid_main"
+    "ce_poster_grid_main",
+    "ce_poster_grid_inDnGV"
   ]
 }

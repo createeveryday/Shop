@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -28,12 +37,17 @@
             "show_gift_card_recipient": false
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
         "shipping_tab": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping",
             "icon": "truck",
-            "content": "<p>Dispatched within <strong>2-5 business days</strong>. Free shipping on orders over $75. Express options available at checkout.</p>"
+            "content": "<p>Dispatched within <strong>2-5 business days</strong>. Free shipping on orders over $75. Express options available at checkout.</p>",
+            "page": ""
           }
         },
         "guarantee_tab": {
@@ -41,7 +55,8 @@
           "settings": {
             "heading": "30-Day Money-Back Guarantee",
             "icon": "chat_bubble",
-            "content": "<p>Not happy? We'll make it right — <strong>no hassle, no questions asked</strong>. Return within 30 days for a full refund.</p>"
+            "content": "<p>Not happy? We'll make it right — <strong>no hassle, no questions asked</strong>. Return within 30 days for a full refund.</p>",
+            "page": ""
           }
         },
         "returns_tab": {
@@ -49,19 +64,18 @@
           "settings": {
             "heading": "Returns & Exchanges",
             "icon": "return",
-            "content": "<p>Returns accepted within <strong>30 days</strong> of delivery. Items must be unworn and in original condition. Sale items are final sale.</p>"
+            "content": "<p>Returns accepted within <strong>30 days</strong> of delivery. Items must be unworn and in original condition. Sale items are final sale.</p>",
+            "page": ""
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
         },
         "size_guide_tab": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Size Guide",
             "icon": "ruler",
-            "content": "<ul><li><strong>S</strong> — Chest 36-38 in, Length 27 in</li><li><strong>M</strong> — Chest 39-41 in, Length 28 in</li><li><strong>L</strong> — Chest 42-44 in, Length 29 in</li><li><strong>XL</strong> — Chest 45-47 in, Length 30 in</li><li><strong>2XL</strong> — Chest 48-50 in, Length 31 in</li><li><strong>3XL</strong> — Chest 51-53 in, Length 32 in</li><li><strong>4XL</strong> — Chest 54-56 in, Length 33 in</li></ul><p>If between sizes, size up. Measurements are of the garment, not body.</p>"
+            "content": "<ul><li><strong>S</strong> — Chest 36-38 in, Length 27 in</li><li><strong>M</strong> — Chest 39-41 in, Length 28 in</li><li><strong>L</strong> — Chest 42-44 in, Length 29 in</li><li><strong>XL</strong> — Chest 45-47 in, Length 30 in</li><li><strong>2XL</strong> — Chest 48-50 in, Length 31 in</li><li><strong>3XL</strong> — Chest 51-53 in, Length 32 in</li><li><strong>4XL</strong> — Chest 54-56 in, Length 33 in</li></ul><p>If between sizes, size up. Measurements are of the garment, not body.</p>",
+            "page": ""
           }
         },
         "faq_tab": {
@@ -69,7 +83,8 @@
           "settings": {
             "heading": "Frequently Asked Questions",
             "icon": "chat_bubble",
-            "content": "<p><strong>Does it shrink?</strong><br/>Pre-shrunk fabric, minimal shrinkage. Wash cold, air dry for best results.</p><p><strong>Is it true to size?</strong><br/>Yes — relaxed unisex fit. Size up if between sizes.</p><p><strong>What is the fabric weight?</strong><br/>6.5 oz heavyweight cotton.</p><p><strong>Can I return or exchange?</strong><br/>Yes, within 30 days of delivery, unworn condition.</p>"
+            "content": "<p><strong>Does it shrink?</strong><br/>Pre-shrunk fabric, minimal shrinkage. Wash cold, air dry for best results.</p><p><strong>Is it true to size?</strong><br/>Yes — relaxed unisex fit. Size up if between sizes.</p><p><strong>What is the fabric weight?</strong><br/>6.5 oz heavyweight cotton.</p><p><strong>Can I return or exchange?</strong><br/>Yes, within 30 days of delivery, unworn condition.</p>",
+            "page": ""
           }
         },
         "share": {
@@ -86,10 +101,10 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "description",
         "shipping_tab",
         "guarantee_tab",
         "returns_tab",
-        "description",
         "size_guide_tab",
         "faq_tab",
         "share"
@@ -114,6 +129,7 @@
       "type": "custom-liquid",
       "settings": {
         "custom_liquid": "<style>.ce-trust{display:flex;justify-content:center;align-items:stretch;background:#111;color:#fff;flex-wrap:wrap;margin:0;}.ce-trust__item{display:flex;align-items:center;gap:8px;padding:14px 20px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.2);}.ce-trust__item:last-child{border-right:none;}@media(max-width:749px){.ce-trust__item{flex:1 1 50%;border-right:none;border-bottom:1px solid rgba(255,255,255,.15);justify-content:center;text-align:center;}}</style><div class=\"ce-trust\"><div class=\"ce-trust__item\">&#128274; Secure Checkout</div><div class=\"ce-trust__item\">&#128230; Free Shipping $75+</div><div class=\"ce-trust__item\">&#9989; 30-Day Money Back</div><div class=\"ce-trust__item\">&#127482;&#127480; Ships from USA</div></div>",
+        "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -158,7 +174,12 @@
           }
         }
       },
-      "block_order": ["usp1", "usp2", "usp3", "usp4"],
+      "block_order": [
+        "usp1",
+        "usp2",
+        "usp3",
+        "usp4"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h3",
@@ -169,7 +190,7 @@
         "background_style": "primary",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "background-2",
+        "color_scheme": "accent-1",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -195,5 +216,10 @@
       }
     }
   },
-  "order": ["main", "trust_bar", "company_usps", "related_products"]
+  "order": [
+    "main",
+    "trust_bar",
+    "company_usps",
+    "related_products"
+  ]
 }

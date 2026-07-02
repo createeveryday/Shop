@@ -17,7 +17,7 @@
         "logo_position": "top-center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "none",
+        "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "background-1",
         "menu_color_scheme": "background-1",
@@ -31,6 +31,7 @@
     },
     "ce12ba0b-2b6c-482c-94af-a92c029a79c8": {
       "type": "announcement-bar",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,

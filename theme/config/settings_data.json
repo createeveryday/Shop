@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/TwiZzyPrintz_Logo_Small_White.png",
+    "logo": "shopify://shop_images/CREATE_EVERYDAY_WHITE_BOX_LOGO_1080X1080_6e1bb086-31f8-4da4-94d6-1c6a553fc79a.png",
     "logo_width": 100,
-    "favicon": "shopify://shop_images/T_Circle2Logo-copy.gif",
+    "favicon": "shopify://shop_images/fav_icon_ced_cb0c2f54-5b22-4942-ad89-71f1a1daf0f2.png",
     "type_header_font": "montserrat_n7",
     "heading_scale": 100,
     "type_body_font": "montserrat_n4",
@@ -109,11 +109,11 @@
     "sold_out_badge_color_scheme": "inverse",
     "brand_headline": "",
     "brand_description": "<p>Thank You</p>",
-    "brand_image": "shopify://shop_images/logo2_copy.png",
-    "brand_image_width": 260,
+    "brand_image": "shopify://shop_images/ce_webcon.png",
+    "brand_image_width": 110,
     "social_facebook_link": "https://www.facebook.com/thisistwizz",
-    "social_instagram_link": "https://www.instagram.com/thisistwizz",
-    "social_youtube_link": "",
+    "social_instagram_link": "https://www.instagram.com/createeveryday.art/",
+    "social_youtube_link": "https://www.youtube.com/@CreateEverydayStudios",
     "social_tiktok_link": "https://www.tiktok.com/@thisistwizz",
     "social_twitter_link": "https://twitter.com/thisistwizz",
     "social_snapchat_link": "",
@@ -162,14 +162,14 @@
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": true,
         "settings": {
+          "greeting_message": "",
           "button_color": "#000000",
           "secondary_color": "#FFFFFF",
           "ternary_color": "#6A6A6A",
           "button_icon": "chat_bubble",
           "button_text": "chat_with_us",
           "button_horizontal_position": "bottom_right",
-          "button_vertical_position": "lowest",
-          "greeting_message": ""
+          "button_vertical_position": "lowest"
         }
       }
     },
@@ -243,7 +243,7 @@
       "scheme-9e3ab1da-8a45-4648-a18c-e77459c3b1ed": {
         "settings": {
           "background": "#ffffff",
-          "background_gradient": "",
+          "background_gradient": "linear-gradient(180deg, rgba(255, 228, 49, 1), rgba(249, 32, 32, 1) 100%)",
           "text": "#121212",
           "button": "#121212",
           "button_label": "#ffffff",

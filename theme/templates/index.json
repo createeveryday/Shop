@@ -1,9 +1,18 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "ce_hero_agentura_1": {
       "type": "ce-hero-agentura",
       "settings": {
-        "video": "shopify://files/videos/handcrafted claymation_ premium cinematic realism_ clean studio.mp4",
+        "video": "shopify://files/videos/0630.mov",
         "video_url_mp4": "",
         "wordmark": "+",
         "label_tl": "Every brief is\na blank canvas.",
@@ -44,7 +53,7 @@
     "ce_marquee_1": {
       "type": "ce-marquee",
       "settings": {
-        "items": "Built for the drive, High-end automotive art, Cinematic by design, Create + Everyday",
+        "items": "Built for the drive, Cinematic by design, Create + Everyday",
         "separator": "✦",
         "speed": 36
       }
@@ -55,7 +64,7 @@
         "slide_R8pqtF": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/tbot_keyart_v01_2026-06-09_07.png",
+            "image": "shopify://shop_images/16X9_T-SHIRTArtboard-2.png",
             "focal": "manual",
             "focal_x": 0,
             "focal_y": 9,
@@ -65,7 +74,7 @@
         "slide_VRAfN8": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/tbot_keyart_v07_2026-06-16_11.png",
+            "image": "shopify://shop_images/ChatGPT_Image_Jun_30_2026_10_31_22_PM.png",
             "focal": "center",
             "focal_x": 50,
             "focal_y": 67,
@@ -87,16 +96,16 @@
         "button_link": "/collections/all",
         "show_arrows": true,
         "autoplay_speed": 4,
-        "image_fit": "cover",
-        "carousel_ratio": "default"
+        "image_fit": "contain",
+        "carousel_ratio": "standard"
       }
     },
     "ce_potd_real": {
       "type": "ce-product-of-the-day",
       "settings": {
         "label": "Product of the Week",
-        "product": "robotz-rule-the-world-sticker-sheets-001",
-        "video": "shopify://files/videos/product-of-the-day.mp4",
+        "product": "create-everyday-flagship-t-shirt",
+        "video": "shopify://files/videos/Seedance 2_0 - FORMAT 15s  MULTI-CUT  6 BEATS  CINEMATIC APPAREL CHARACTER REVEALTITLE T-BOT WEARS T.mp4",
         "video_url_mp4": "",
         "heading": "+CREATE EVERDAY",
         "description": "<p>CREATE EVERYDAY DAILY TEE</p>",
@@ -107,6 +116,232 @@
         "button_link": "",
         "media_position": "left",
         "color_scheme": "background-1"
+      }
+    },
+    "ce_product_of_the_day_CMWCVN": {
+      "type": "ce-product-of-the-day",
+      "name": "Product of the day",
+      "settings": {
+        "label": "Product of the Day",
+        "product": "create-everyday-hoodie",
+        "video": "shopify://files/videos/FORMAT_ 15s _ MULTI-CUT _ 6 BEATS _ HIGH-VIRAL CHARACTER REVEAL.mp4",
+        "video_url_mp4": "",
+        "heading": "+hoodie",
+        "description": "",
+        "show_price": true,
+        "button_label": "Add to cart",
+        "show_view_link": true,
+        "view_label": "View details",
+        "button_link": "",
+        "media_position": "left",
+        "color_scheme": ""
+      }
+    },
+    "ce_product_of_the_day_UPqyQD": {
+      "type": "ce-product-of-the-day",
+      "name": "Product of the day",
+      "settings": {
+        "label": "Product of the Day",
+        "product": "create-everyday-embroidered-snapback-hat",
+        "video": "shopify://files/videos/Seedance 2_0 - Use the uploaded reference image as the exact product reference_ The snapback hat des.mp4",
+        "video_url_mp4": "",
+        "heading": "sNAPBACK",
+        "description": "<h2>Rep your creative identity wherever you go.</h2><p><strong>Built with Creator DNA</strong> — The Create+Everyday embroidery isn't just a logo — it's a signal. A daily reminder (and a conversation starter) that creativity is your practice, not just your passion.</p>",
+        "show_price": true,
+        "button_label": "Add to cart",
+        "show_view_link": true,
+        "view_label": "View details",
+        "button_link": "",
+        "media_position": "left",
+        "color_scheme": ""
+      }
+    },
+    "ce_poster_grid_home": {
+      "type": "ce-poster-grid",
+      "blocks": {
+        "poster_tWP6qw": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/T-BOT-CED-BLK-T-1.png",
+            "title": "",
+            "size": "1x1",
+            "product": "create-everyday-square-pillow"
+          }
+        },
+        "poster_1": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/tbot_keyart_v01_2026-06-09_07.png",
+            "title": "",
+            "size": "2x2",
+            "product": ""
+          }
+        },
+        "poster_2": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/6-15-26Artboard-8.png",
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
+        },
+        "poster_3": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/933A9912-6157-4E6D-ABF8-A539ED03640C.png",
+            "title": "",
+            "size": "1x2",
+            "product": ""
+          }
+        },
+        "poster_4": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/MICHAEL_JORDAN_BLACK.png",
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
+        },
+        "poster_5": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/tbot_keyart_v07_2026-06-16_11.png",
+            "title": "",
+            "size": "2x1",
+            "product": ""
+          }
+        },
+        "poster_6": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/tbot_keyart_v01_2026-06-09_03_03.png",
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
+        },
+        "poster_7": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/lwwArtboard-3.png",
+            "title": "",
+            "size": "1x1",
+            "product": ""
+          }
+        },
+        "poster_8": {
+          "type": "poster",
+          "settings": {
+            "image": "shopify://shop_images/june-6Artboard-17.png",
+            "title": "",
+            "size": "1x2",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "poster_tWP6qw",
+        "poster_1",
+        "poster_2",
+        "poster_3",
+        "poster_4",
+        "poster_5",
+        "poster_6",
+        "poster_7",
+        "poster_8"
+      ],
+      "settings": {
+        "label": "🖼️",
+        "heading": "Poster Prints",
+        "subheading": "Museum-grade prints of the collection. Tap any piece to view it full-screen — or shop it directly.",
+        "gap": 24,
+        "shop_label": "Shop print",
+        "more_label": "Shop all posters",
+        "more_link": "/pages/poster-prints"
+      }
+    },
+    "ce_youtube_1": {
+      "type": "ce-youtube",
+      "settings": {
+        "label": "Watch",
+        "heading": "",
+        "description": "",
+        "youtube_url": "https://youtu.be/a48RD_IRkG0",
+        "channel_url": "https://www.youtube.com/@CreateEverydayStudios",
+        "button_label": "Subscribe on YouTube",
+        "media_position": "left",
+        "color_scheme": "background-1"
+      }
+    },
+    "ce_gallery_xfRDhC": {
+      "type": "ce-gallery",
+      "blocks": {
+        "item_BFz3kk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/tbot_keyart_v01_2026-06-09_07.png",
+            "category": "",
+            "title": "",
+            "external_video": ""
+          }
+        },
+        "item_pkTdKN": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/6-15-26Artboard-8.png",
+            "category": "",
+            "title": "",
+            "external_video": ""
+          }
+        },
+        "item_XyFtrU": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/933A9912-6157-4E6D-ABF8-A539ED03640C.png",
+            "category": "",
+            "title": "",
+            "external_video": ""
+          }
+        },
+        "item_CEVaTz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/MICHAEL_JORDAN_BLACK.png",
+            "category": "",
+            "title": "",
+            "external_video": ""
+          }
+        },
+        "item_dTt3ac": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/tbot_keyart_v07_2026-06-16_11.png",
+            "category": "",
+            "title": "",
+            "external_video": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_BFz3kk",
+        "item_pkTdKN",
+        "item_XyFtrU",
+        "item_CEVaTz",
+        "item_dTt3ac"
+      ],
+      "name": "Visual gallery",
+      "settings": {
+        "label": "",
+        "heading": "Follow Us",
+        "subheading": "See the world through my lens: adventures in photos and videos.",
+        "show_instagram": false,
+        "instagram_url": "",
+        "show_filters": false,
+        "all_label": "All",
+        "more_label": "View More",
+        "more_link": "https://www.instagram.com/thisistwizz/"
       }
     },
     "ce_editorial_cards_1": {
@@ -181,175 +416,11 @@
         "card_m9GKRP",
         "c3"
       ],
+      "disabled": true,
       "settings": {
         "label": "Selected work",
         "heading": "A collection of obsessions",
         "note": "We don't wait for the right brief.\nWe write it."
-      }
-    },
-    "ce_gallery_xfRDhC": {
-      "type": "ce-gallery",
-      "blocks": {
-        "item_BFz3kk": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/tbot_keyart_v01_2026-06-09_07.png",
-            "category": "",
-            "title": "",
-            "external_video": ""
-          }
-        },
-        "item_pkTdKN": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/6-15-26Artboard-8.png",
-            "category": "",
-            "title": "",
-            "external_video": ""
-          }
-        },
-        "item_XyFtrU": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/933A9912-6157-4E6D-ABF8-A539ED03640C.png",
-            "category": "",
-            "title": "",
-            "external_video": ""
-          }
-        },
-        "item_CEVaTz": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/MICHAEL_JORDAN_BLACK.png",
-            "category": "",
-            "title": "",
-            "external_video": ""
-          }
-        },
-        "item_dTt3ac": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/tbot_keyart_v07_2026-06-16_11.png",
-            "category": "",
-            "title": "",
-            "external_video": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_BFz3kk",
-        "item_pkTdKN",
-        "item_XyFtrU",
-        "item_CEVaTz",
-        "item_dTt3ac"
-      ],
-      "name": "Visual gallery",
-      "settings": {
-        "label": "Gallery",
-        "heading": "Visual STYLES",
-        "subheading": "See the world through my lens: adventures in photos and videos.",
-        "show_filters": false,
-        "all_label": "All",
-        "more_label": "View More",
-        "more_link": "https://www.instagram.com/thisistwizz/"
-      }
-    },
-    "ce_poster_grid_home": {
-      "type": "ce-poster-grid",
-      "blocks": {
-        "poster_1": {
-          "type": "poster",
-          "settings": {
-            "image": "shopify://shop_images/tbot_keyart_v01_2026-06-09_07.png",
-            "title": "",
-            "size": "2x2"
-          }
-        },
-        "poster_2": {
-          "type": "poster",
-          "settings": {
-            "image": "shopify://shop_images/6-15-26Artboard-8.png",
-            "title": "",
-            "size": "1x1"
-          }
-        },
-        "poster_3": {
-          "type": "poster",
-          "settings": {
-            "image": "shopify://shop_images/933A9912-6157-4E6D-ABF8-A539ED03640C.png",
-            "title": "",
-            "size": "1x2"
-          }
-        },
-        "poster_4": {
-          "type": "poster",
-          "settings": {
-            "image": "shopify://shop_images/MICHAEL_JORDAN_BLACK.png",
-            "title": "",
-            "size": "1x1"
-          }
-        },
-        "poster_5": {
-          "type": "poster",
-          "settings": {
-            "image": "shopify://shop_images/tbot_keyart_v07_2026-06-16_11.png",
-            "title": "",
-            "size": "2x1"
-          }
-        },
-        "poster_6": {
-          "type": "poster",
-          "settings": {
-            "image": "shopify://shop_images/tbot_keyart_v01_2026-06-09_03_03.png",
-            "title": "",
-            "size": "1x1"
-          }
-        },
-        "poster_7": {
-          "type": "poster",
-          "settings": {
-            "image": "shopify://shop_images/lwwArtboard-3.png",
-            "title": "",
-            "size": "1x1"
-          }
-        },
-        "poster_8": {
-          "type": "poster",
-          "settings": {
-            "image": "shopify://shop_images/june-6Artboard-17.png",
-            "title": "",
-            "size": "1x2"
-          }
-        }
-      },
-      "block_order": [
-        "poster_1",
-        "poster_2",
-        "poster_3",
-        "poster_4",
-        "poster_5",
-        "poster_6",
-        "poster_7",
-        "poster_8"
-      ],
-      "settings": {
-        "label": "Prints",
-        "heading": "Poster Prints",
-        "subheading": "Museum-grade prints of the collection. Tap any piece to view it full-screen — or shop it directly.",
-        "gap": 8,
-        "shop_label": "Shop print",
-        "more_label": "Shop all posters",
-        "more_link": "/pages/poster-prints"
-      }
-    },
-    "custom_liquid_QHhqLA": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: auto;\n}\n</style>\n<video muted autoplay playsinline loop>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/935468cbc8cb4c3cad7ef0bf6f47b36f.mp4\"\n                  type=\"video/mp4\">\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/935468cbc8cb4c3cad7ef0bf6f47b36f.mp4\"\n                  type=\"video/mp4\">\n</video>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 0
       }
     },
     "raw_ELphcG": {
@@ -360,7 +431,7 @@
           "disabled": true,
           "settings": {
             "title": "RAW Element",
-            "section_html": "<!--  Thank you for Downloading! FX_Codes_Basic_Modular_Template_01.07.2024 -->\n\n\n\n    <!--  Global: Proper Character Display  -->\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n    <!--  Outlook: Render Using Better MS Engine  -->\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <!--  Global: Initial Email Scale  -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <!--  Global: Prevent Blue Links and Autolinking  -->\n    <meta name=\"format-detection\" content=\"telephone=no, date=no, address=no, email=no\">\n    <!--  Apple: Prevent Reformatting and Zooming  -->\n    <meta name=\"x-apple-disable-message-reformatting\">\n\n    <!--  Assistive Technology and Browser Tabs  -->\n    <title>TwiZzyPrintz</title>\n\n\n\n\n\n    <!--  Gmail Specific  -->\n    <style type=\"text/css\" data-embed=\"\">\n        @media only screen and (max-width: 640px) {\n            \n            #gbt_container {transform: none !important;}\n            #gbt_innerContainer {margin: 0 auto !important;}\n            u + #body {width:100vw !important; max-width: 100%!important;}\n        }\n    </style>\n    <style type=\"text/css\" data-embed=\"\">\n        .gmailFix {display: none; display: none !important;}\n    </style>\n\n    <!--  Outlook Specific  -->\n    <!--[if mso]>\n        <style>\n            table, th, td, h1, h2, h3, h4, h5, h6, p, span, strong, b, em, i, a, sup, ul, ol, li {font-family: Arial, sans-serif !important;}\n            sup {font-size: 100% !important;}\n            ul, ol {margin-left: -24px !important;}\n            table, tr, th {border-collapse: collapse;}\n            tr {font-size: 0px; line-height: 0px; border-collapse: collapse;}\n            \n            .outlook-FontSize--14 {font-size: 14px !important;}\n        </style>\n    <![endif]-->\n    <!--[if gte mso 9]><xml>\n        <o:OfficeDocumentSettings>\n            <o:AllowPNG/>\n            <o:PixelsPerInch>96</o:PixelsPerInch>\n        </o:OfficeDocumentSettings>\n    </xml><![endif]-->\n\n    <!--  Mobile Style (640)  -->\n    <style>\n        @media only screen and (max-width: 640px) {\n\n            \n            .m--stack {width: 100% !important; display: block !important; min-width: 0px !important; max-width: 100% !important;}\n\n            \n            .m-width--100p {width: 100% !important;}\n\n            \n            .m-pad-lr--20 {padding-left: 20px !important; padding-right: 20px !important;}\n            .m-pad-t--5 {padding-top: 5px !important;}\n            .m-pad-t--20 {padding-top: 20px !important;}\n\n              \n            .m-float--center {float: inherit !important;}\n\n                    \n            .m-textAlign--center {text-align: center !important;}\n            \n            \n        }\n    </style>\n\n\n\n<module name=\"preheader\" label=\"Preheader\">\n    <div style=\"display: none; max-height: 0px; overflow: hidden;\">\n    <editable name=\"preheader\">www.TwiZzyPrintz.com</editable>\n     ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌  ‌ ‌ ‌ ‌ \n    ‌ ‌ ‌ ‌ ‌\n     ‌ ‌ ‌ ‌ \n    </div>\n    </module>\n\n\n\n\n    <!--  START: Accessible Article (Improves Accessibility)  -->\n    <div role=\"article\" aria-roledescription=\"email\" aria-label=\"Custom Template\" lang=\"en\" style=\"font-size: 1rem;\">\n\n        <!--  START: Email Wrapper  -->\n        <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%; margin: 0px auto;\">\n            <tbody>\n<tr>\n                <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly; padding-top: 20px;\">\n\n                    <!--  START: Email Container - 640px (Recommended to use 600px - 800px)  -->\n                    <table class=\"m-width--100p m-float--center\" width=\"640\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:640px; max-width: 640px; margin:0px auto;\">\n\n                        <!--  START: Header Modules Container  -->\n                        <tbody>\n<tr>\n                            <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%; margin:0px auto;\">\n\n                             <!--  START: MODULE - View in Browser  -->\n                             \n                             <!--  END: MODULE - View in Browser -->\n                             \n                             <!--  START: MODULE - Header (logo)  -->\n                             \n                             <!--  END: MODULE - Header (logo)  -->\n\n                                </table>\n                            </td>\n                        </tr>\n                        <!--  END: Header Modules Container  -->\n                      \n                        <!--  START: Body Modules Container  -->\n                        <tr>\n                            <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; padding-top: 3%; padding-bottom: 70px; mso-line-height-rule: exactly;\">\n                                <div class=\"row\">\n                                    <div class=\"column\">\n                                      <img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/accessories_copy.jpg?v=1708318420\" alt=\"Snow\" style=\"width:100%\">\n                                    </div>\n                                    <div class=\"column\">\n                                      <img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/design2_copy.png?v=1708321006\" alt=\"Forest\" style=\"width:100%\">\n                                    </div>\n                                    <div class=\"column\">\n                                      <img src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/palette_copy.png?v=1708320592\" alt=\"Mountains\" style=\"width:100%\">\n                                    </div>\n                                  </div>\n<table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%; margin:0px auto;\">\n\n                                  <!--  START: MODULE - Image (full-width)  -->\n                                  <tbody>\n<tr>\n                                    <!-- vertical spacing from prior module -->\n                                    <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                        <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; margin: 50px auto;\">\n                                            <tbody>\n<tr>\n                                                <!-- horizontal spacing/background color -->\n                                                <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                                    <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; margin: 0px auto;\">\n                                                        <tbody>\n<tr>\n                                                            <!-- image -->\n                                                            <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n<a href=\"https://www.twizzyprintz.com/\" target=\"_blank\" style=\"\" name=\"ImageName_image\" alias=\"ImageName_image\"><img class=\"m-width--100p\" src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/Actionherocollection_top.jpg?v=1707972940\" border=\"0\" style=\"display:block; margin:0px auto; max-width:640px !important;\" width=\"640\" height=\"\" alt=\"AltTextHere\"></a>\n                                                            </td>\n                                                        </tr>\n                                                    </tbody>\n</table>\n                                                </td>\n                                            </tr>\n                                        </tbody>\n</table>\n                                    </td>\n                                  </tr>\n                                \n                                  <!--  END: MODULE - Image (full-width)  -->\n                                  <style>\n                                    * {\n                                      box-sizing: border-box;\n                                    }\n                                    \n                                    .img-container {\n                                      float: left;\n                                      width: 33.33%;\n                                      padding: 9px;\n                                    }\n                                    \n                                    .clearfix::after {\n                                      content: \"\";\n                                      clear: both;\n                                      display: table;\n                                    }\n                                    </style>\n                                    \n                                   \n                                    \n                                   \n                                  <!--  START: MODULE - Text (h1/paragraph)  -->\n                              \n                                    \n                                  \n                                  \n                                  <tr>\n                                    <!-- vertical spacing from prior module -->\n                                    <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; padding-top: 40px; mso-line-height-rule: exactly;\">\n                                        <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; margin: 0px auto;\">\n                                            <tbody>\n<tr>\n                                                <!-- horizontal spacing/background color -->\n                                                <td class=\"m-pad-lr--20\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                                    <!-- h1/paragraph/h3 -->\n                                                    <h1 class=\"m-textAlign--center \" style=\"padding: 0px; margin: 0; font-family: Arial, sans-serif; font-size: 36px; font-weight: bold; font-weight: 700; color: #414141; mso-line-height-alt: 36px; line-height: 1.0; letter-spacing: normal; text-align: left;\">Lets Create</h1>\n                                                    <p class=\"m-textAlign--center m-pad-t--20\" style=\"padding: 0px; margin: 0; margin-top: 10px; font-family: Arial, sans-serif; font-size: 16px; font-weight: normal; font-weight: 400; color: #414141; mso-line-height-alt: 23px; line-height: 1.4; letter-spacing: normal; text-align: left;\">Step into the world of limitless creativity,where art meets innovation! Each piece is a unique blend of algorithms and imagination, resulting in captivating visuals that are exclusive to your taste.</p>\n                                               \n                                                </td>\n                                            </tr>\n                                        </tbody>\n</table>\n                                    </td>\n                                  </tr>\n                                  <!--  END: MODULE - Text (h1/paragraph)  -->\n                                  \n                                  <style>.column {\n                                    float: left;\n                                    width: 33.33%;\n                                    padding: 7px;\n                                  }\n                                  \n                                  \n                                  .row::after {\n                                    content: \"\";\n                                    clear: both;\n                                    display: table;\n                                    \n                                  }</style>\n                                  <!--  START: MODULE - Button (solid/ghost)  -->\n                                  \n                                  <tr>\n                                    <!-- vertical spacing from prior module -->\n                                    <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; padding-top: 50px; mso-line-height-rule: exactly;\">\n                                        <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; margin: 0px auto;\">\n                                            <tbody>\n<tr>\n                                                <!-- horizontal spacing/background color -->\n                                                <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                                    <table class=\"m-float--center\" width=\"\" align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"margin:0px auto;\">\n                                                        <tbody>\n<tr>\n                                                            <!-- button -->\n                                                            <td class=\"m-text--button\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 58%; padding: 0px; padding-top: 12px; padding-right: 22px; padding-bottom: 12px; padding-left: 22px; mso-line-height-alt: 14px; mso-line-height-rule: exactly; background: #f37200; font-family: Arial, sans-serif; font-size: 14px; font-weight: 600; color: #1a1a1a; line-height: 1.0; letter-spacing: normal; border: #1A1A1A solid 2px; border-radius: 0PX;\">\n<a href=\"https://www.twizzyprintz.com/products/custom-art\" target=\"_blank\" style=\"text-decoration: none; color: #1a1a1a;\" name=\"ButtonName_button\" alias=\"ButtonName_button\">Get Started</a>\n                                                            </td>\n                                                        </tr>\n                                                    </tbody>\n</table>\n                                                </td>\n                                            </tr>\n                                        </tbody>\n</table>\n                                    </td>\n                                  </tr>\n                                  <!--  END: MODULE - Button (solid/ghost)  -->\n        \n                                </tbody>\n</table>\n                            </td>\n                        </tr>\n                        <!--  END: Body Modules Container  -->\n                        <tr>\n                            <!-- vertical spacing from prior module -->\n                            <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; margin: 0px auto;\">\n                                    <tbody>\n<tr>\n                                        <!-- horizontal spacing/background color -->\n                                        <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                            <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; margin: 0px auto;\">\n                                                <tbody>\n<tr>\n                                                    <!-- image -->\n                                                    <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n<a href=\"https://www.twizzyprintz.com/\" target=\"_blank\" style=\"\" name=\"ImageName_image\" alias=\"ImageName_image\"><img class=\"m-width--100p\" src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/TwizzyPrintz_Top_Banner.jpg?v=1707769084\" border=\"0\" style=\"display:block; margin:0px auto; max-width:640px !important;\" width=\"640\" height=\"\" alt=\"AltTextHere\"></a>\n                                                    </td>\n                                                </tr>\n                                            </tbody>\n</table>\n                                        </td>\n                                    </tr>\n                                </tbody>\n</table>\n                            </td>\n                          </tr>\n                        <!--  START: Footer Modules Container  -->\n                        <tr>\n                            <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%px; margin:0px auto;\">\n\n                                 <!--  START: MODULE - Footer (logo/text)  -->\n                                 <tbody>\n<tr>\n                                    <!-- vertical spacing from prior module -->\n                                    <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                        <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; margin: 0px auto;\">\n                                            <tbody>\n<tr>\n                                                <!-- horizontal spacing/background color -->\n                                                <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; padding-top: 30px; padding-right: 30px; padding-left: 30px; mso-line-height-rule: exactly; border-top: 2px solid #CCCCCC;\">\n                                                    <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; margin: 0px auto;\">\n                                                        <!-- logo -->\n                                                        <tbody>\n<tr>\n                                                            <td class=\"m-pad-t--20\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n<a href=\"#\" target=\"_blank\" style=\"\" name=\"Footer_LogoName_image\" alias=\"Footer_LogoName_image\"><img class=\"m-width--100p\" src=\"https://cdn.shopify.com/s/files/1/0758/7790/8797/files/tplogo_image_dfe10f3b-9471-4ee0-927f-f8f3f2ad9944.png?v=1708387506\" border=\"0\" style=\"display:block; margin:0px auto; max-width:150px !important;\" width=\"150\" height=\"\" alt=\"AltTextHere\"></a>\n                                                            </td>\n                                                        </tr>\n                                                        <!-- text -->\n                                                        <tr>\n                                                            <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 20px 0px; padding-top: 20px; mso-line-height-rule: exactly;\">\n                                                                <p class=\"m-textAlign--center\" style=\"padding: 0px; margin: 0; font-family: Arial, sans-serif; font-size: 14px; font-weight: normal; font-weight: 400; color: #616D77; mso-line-height-alt: 20px; line-height: 1.4; letter-spacing: normal; text-align: center;\">Art By TwiZz</p>\n                                                            </td>\n                                                        </tr>\n                                                    </tbody>\n</table>\n                                                </td>\n                                            </tr>\n                                        </tbody>\n</table>\n                                    </td>\n                                 </tr>\n                                 \n                                 <!--  END: MODULE - Footer (logo/text)  -->\n                                 \n                                  \n                             \n                                 \n                      \n                        \n                                 \n                                 <!--  START: MODULE - Footer (legal stuff)  -->\n                                 <tr>\n                                    <!-- vertical spacing from prior module -->\n                                    <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                        <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; margin: 0px auto;\">\n                                            <tbody>\n<tr>\n                                                <!-- horizontal spacing/background color -->\n                                                <td class=\"m-pad-lr--20\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; padding-left: 30px; padding-right: 30px; mso-line-height-rule: exactly;\">\n                                                    <table class=\"m-width--100p m-float--center\" width=\"100%\" align=\"center\" role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; margin: 0px auto;\">\n                                                        <!-- text -->\n                                                        <tbody>\n<tr>\n                                                            <td class=\"\" width=\"100%\" align=\"center\" border=\"0\" style=\"width: 100%; padding: 0px; mso-line-height-rule: exactly;\">\n                                                         \n                                                               \n                                           \n                                                            \n                                                            \n                                                                <p class=\"m-text--p\" style=\"padding: 0px; padding-bottom: 20px; margin: 0; margin-top: 10px; font-family: Arial, sans-serif; font-size: 11px; font-weight: normal; font-weight: 400; color: #616D77; mso-line-height-alt: 16px; line-height: 1.4; letter-spacing: normal; text-align: center;\">© 2077. All wrongs reserved.</p>\n                                                            </td>\n                                                        </tr>\n                                                    </tbody>\n</table>\n                                                </td>\n                                            </tr>\n                                        </tbody>\n</table>\n                                    </td>\n                                 </tr>\n                                 <!--  END: MODULE - Footer (legal)  -->\n                                 \n\n                                </tbody>\n</table>\n                            </td>\n                        </tr>\n                        <!--  END: Footer Modules Container  -->\n\n                    </tbody>\n</table>\n                    <!--  END: Email Container - 600px  -->\n\n                </td>\n            </tr>\n        </tbody>\n</table>\n        <!--  END: Email Wrapper  -->\n\n     \n\n    </div>\n    <!--  END: Accessible Article  -->",
+            "section_html": "<!--  Thank you for Downloading! FX_Codes_Basic_Modular_Template_01.07.2024 -->",
             "heading_size": "large",
             "text_alignment": "left"
           }
@@ -371,199 +442,6 @@
       ],
       "settings": {
         "width": "regular"
-      }
-    },
-    "featured_collection_pkGJRg": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "🤖Robotz Rule The World!",
-        "heading_size": "h1",
-        "description": "<p>Join the Rebellion: RobotzRuleTheWorld!</p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "robotzruletheworld",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_kxFErf": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Posters & Stickers",
-        "heading_size": "h1",
-        "description": "<p>A bold fusion of art, rebellion, and futurism. </p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "printz",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_cx8R4g": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_FJcpkj": {
-          "type": "heading",
-          "settings": {
-            "heading": "T-MOJI CUSTOM ART",
-            "heading_size": "h1"
-          }
-        },
-        "text_QXDyh8": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Get your very own Custom Made T-MOJI by <a href=\"https://www.instagram.com/thisistwizz/\" target=\"_blank\" title=\"https://www.instagram.com/thisistwizz/\">@thisistwizz</a></p>",
-            "text_style": "body"
-          }
-        },
-        "button_7zEeX7": {
-          "type": "button",
-          "settings": {
-            "button_label": "GET STARTED",
-            "button_link": "shopify://pages/custom-art",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_FJcpkj",
-        "text_QXDyh8",
-        "button_7zEeX7"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/Stickers_3cc44f89-42f1-4bfa-ae9e-61baee41abe1.gif",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_jUtEK6": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "ThunderBotz ⚡",
-        "heading_size": "h1",
-        "description": "<p>ThunderBotz⚡: Energy & Motion</p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "thunderbotz⚡-energy-motion",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_69RHzA": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "<strong>Floral Guardians</strong>💐🤖",
-        "heading_size": "h1",
-        "description": "<p>Blends tech and nature, power and peace. Upgrade your space—shop now! 💐🤖</p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "floral-guardians",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_JGTtpi": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Con·trived Magazine📙",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "con-trived",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "ce_testimonial_1": {
@@ -578,186 +456,13 @@
         "button_link": "/pages/contact"
       }
     },
-    "collage_cDxUGE": {
-      "type": "collage",
-      "blocks": {
-        "product_fFWJbd": {
-          "type": "product",
-          "settings": {
-            "product": "robotzruletheworld-botsquad-001",
-            "second_image": false
-          }
-        },
-        "product_CFX3xm": {
-          "type": "product",
-          "settings": {
-            "product": "robotz-rule-the-world-retro-graphic-t-shirt",
-            "second_image": true
-          }
-        },
-        "product_Kj7gwh": {
-          "type": "product",
-          "settings": {
-            "product": "robotz-rule-the-world-sticker-sheets-001",
-            "second_image": false
-          }
-        }
-      },
-      "block_order": [
-        "product_fFWJbd",
-        "product_CFX3xm",
-        "product_Kj7gwh"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "none",
-        "color_scheme": "",
-        "padding_top": 32,
-        "padding_bottom": 20
-      }
-    },
-    "featured_product_JmwBmV": {
-      "type": "featured-product",
-      "blocks": {
-        "text_UqhHkW": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_6mFFHf": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_yAJmAc": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_nGGezN": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "dropdown"
-          }
-        },
-        "quantity_selector_HyyYRd": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_EQqCKb": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_TGqtb7": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_UqhHkW",
-        "title_6mFFHf",
-        "price_yAJmAc",
-        "variant_picker_nGGezN",
-        "quantity_selector_HyyYRd",
-        "buy_buttons_EQqCKb",
-        "share_TGqtb7"
-      ],
-      "disabled": true,
-      "settings": {
-        "product": "respect-the-shooter-unisex-tee",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "hover",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collection_list_i7nzzE": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_HKbjQy": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "robotzruletheworld"
-          }
-        },
-        "featured_collection_qRANnD": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "con-trived"
-          }
-        },
-        "featured_collection_7gRXfy": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "respect-the-shooter"
-          }
-        },
-        "featured_collection_waMkKy": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "posters"
-          }
-        },
-        "featured_collection_c3zYUT": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "stickers"
-          }
-        },
-        "featured_collection_8BE7Rk": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "apparel"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_HKbjQy",
-        "featured_collection_qRANnD",
-        "featured_collection_7gRXfy",
-        "featured_collection_waMkKy",
-        "featured_collection_c3zYUT",
-        "featured_collection_8BE7Rk"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn_cgaWnd": {
       "type": "multicolumn",
       "blocks": {
         "column_zhxpN3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/ce_webcon.png",
+            "image": "shopify://shop_images/T_Circle2Logo-copy.gif",
             "title": "<a href=\"https://thisistwizz.com/\" target=\"_blank\" title=\"https://thisistwizz.com/\">www.ThisisTwiZz.com</a>",
             "text": "",
             "link_label": "",
@@ -787,6 +492,7 @@
     },
     "ce_cta_1": {
       "type": "ce-cta-wordmark",
+      "disabled": true,
       "settings": {
         "overlay_opacity": 15,
         "label_left": "Every project\nstarts here.",
@@ -906,19 +612,6 @@
         "section_radius": 0,
         "lazy": true
       }
-    },
-    "ce_youtube_1": {
-      "type": "ce-youtube",
-      "settings": {
-        "label": "Watch",
-        "heading": "Create Everyday Studios",
-        "description": "<p>New drops, process films and behind-the-scenes — straight from the studio. Subscribe so you never miss a release.</p>",
-        "youtube_url": "",
-        "channel_url": "https://www.youtube.com/@CreateEverydayStudios",
-        "button_label": "Subscribe on YouTube",
-        "media_position": "left",
-        "color_scheme": "background-1"
-      }
     }
   },
   "order": [
@@ -927,23 +620,15 @@
     "ce_marquee_1",
     "ce_statement_1",
     "ce_potd_real",
-    "ce_editorial_cards_1",
-    "ce_gallery_xfRDhC",
+    "ce_product_of_the_day_CMWCVN",
+    "ce_product_of_the_day_UPqyQD",
     "ce_poster_grid_home",
-    "custom_liquid_QHhqLA",
-    "raw_ELphcG",
-    "featured_collection_pkGJRg",
-    "featured_collection_kxFErf",
-    "image_with_text_cx8R4g",
-    "featured_collection_jUtEK6",
-    "featured_collection_69RHzA",
-    "featured_collection_JGTtpi",
-    "ce_testimonial_1",
-    "collage_cDxUGE",
-    "featured_product_JmwBmV",
-    "collection_list_i7nzzE",
-    "multicolumn_cgaWnd",
     "ce_youtube_1",
+    "ce_gallery_xfRDhC",
+    "ce_editorial_cards_1",
+    "raw_ELphcG",
+    "ce_testimonial_1",
+    "multicolumn_cgaWnd",
     "ce_cta_1",
     "ss_gallery_1_7b8fhJ"
   ]
